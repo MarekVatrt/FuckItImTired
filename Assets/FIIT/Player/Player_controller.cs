@@ -4,7 +4,7 @@ using System.Collections;
 public class Player_controller : MonoBehaviour{
 
     //characteristics
-    private float move_speed=3f;
+    [SerializeField]private float move_speed=5.5f;
 
     //movement
     [SerializeField] private Animator animator;
