@@ -19,7 +19,8 @@ public class nausea_controller : MonoBehaviour
         if (fill_or_empty)
         {
             timer=5f;
-            slider.value+=fill_value;
+            slider.value += fill_value * Time.deltaTime;
+
             if (slider.value >= 100)
             {
                 die_of_smell();
@@ -29,7 +30,7 @@ public class nausea_controller : MonoBehaviour
         else
         {
             Debug.Log("sme tu");
-            slider.value-=fill_value;
+            slider.value -= fill_value * Time.deltaTime;
             if (slider.value < 0)
             {
                 slider.value=0;
@@ -47,6 +48,6 @@ public class nausea_controller : MonoBehaviour
 
     void die_of_smell()
     {
-        //Debug.Log("smrad itickarov bol na teba priliz moc");
+        Debug.Log("smrad itickarov bol na teba priliz moc");
     }
 }
