@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -105541197
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -3067294759816104061, guid: 227bcc5883af9a041a1356ee173026ac,
     type: 3}
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b7301f02d7c234cb84b6ace52b26bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_controller
+  move_speed: 5.5
   animator: {fileID: 5743588086523467779}
 --- !u!50 &5282953910919951703
 Rigidbody2D:
@@ -169,7 +170,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -179,7 +180,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.125, y: 1.5}
+  m_Size: {x: 0.72, y: 1.1}
   m_EdgeRadius: 0
 --- !u!95 &5743588086523467779
 Animator:
