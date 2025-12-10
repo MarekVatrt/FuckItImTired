@@ -8,6 +8,7 @@ TagManager:
   - basket
   - monster
   - score_point
+  - to_elevator
   layers:
   - Default
   - TransparentFX
