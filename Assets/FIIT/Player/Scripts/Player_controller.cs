@@ -50,11 +50,6 @@ public class Player_controller : MonoBehaviour{
         }
         
 
-        //attack
-        if(Input.GetKeyDown("space")){
-            Attack();
-        }
-
         //interact
         if(Input.GetKeyDown("e")){
             Interact();
@@ -70,10 +65,6 @@ public class Player_controller : MonoBehaviour{
     {
         Vector2 velocity = xy * move_speed;
         body.linearVelocity = velocity; 
-    }
-
-    void Attack(){
-        Debug.Log("attackkkkkkkkk");
     }
 
     void Interact(){
