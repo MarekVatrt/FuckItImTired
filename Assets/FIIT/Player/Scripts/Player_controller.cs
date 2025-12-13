@@ -11,8 +11,11 @@ public class Player_controller : MonoBehaviour{
     private Rigidbody2D body;
     private Vector2 xy;
 
+    public bool is_facing_right;
+
     
     void Start(){
+        is_facing_right=true;
         body=GetComponent<Rigidbody2D>();
     }
 
@@ -21,6 +24,17 @@ public class Player_controller : MonoBehaviour{
         //move, TODO asi prerobit nech to hned nacitava do vectora
         float x=Input.GetAxisRaw("Horizontal");
         float y=Input.GetAxisRaw("Vertical");
+
+        //nastavime stranu, na ktoru bol naposledy obrateny player
+        // pre attacking script
+        if (x > 0)
+        {
+            is_facing_right=true;
+        }
+        else if (x < 0)
+        {
+            is_facing_right=false;
+        }
 
         xy= new Vector2(x,y).normalized;
 

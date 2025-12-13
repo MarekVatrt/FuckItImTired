@@ -1113,7 +1113,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -14101,6 +14101,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1906770525789121217, guid: d12d1c31755dba042bcc8dd57ad420e8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4968578941639989606, guid: d12d1c31755dba042bcc8dd57ad420e8,
         type: 3}
       propertyPath: m_Name
@@ -14110,6 +14115,16 @@ PrefabInstance:
         type: 3}
       propertyPath: walk_speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044218612669625432, guid: d12d1c31755dba042bcc8dd57ad420e8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044218612669625432, guid: d12d1c31755dba042bcc8dd57ad420e8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18714,6 +18729,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayerID
       value: -105541197
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491474078998570590, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491474078998570590, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6395253937941174405, guid: f538208b43343db4ab860d5d717b3a4e,
         type: 3}

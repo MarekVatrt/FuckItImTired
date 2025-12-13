@@ -35,8 +35,8 @@ TagManager:
   - Layer 1
   - Layer 2
   - Layer 3
-  - 
-  - 
+  - Enemy layer
+  - Player layer
   - 
   - 
   - 
@@ -56,6 +56,12 @@ TagManager:
     locked: 0
   - name: Layer 3
     uniqueID: 4189426099
+    locked: 0
+  - name: enemy
+    uniqueID: 2874266245
+    locked: 0
+  - name: player
+    uniqueID: 599795733
     locked: 0
   m_RenderingLayers:
   - Default

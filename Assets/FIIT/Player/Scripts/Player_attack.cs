@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Player_attack : MonoBehaviour
 {
+    //potrebujem script aby som zistil na ktoru stranu bol hrac naposledy otoceny
+    //do tej strany zautoci
+    Player_controller player_main_script;
+    //budeme flipovat weapons object
+    GameObject weapon_holder;
     
     [System.Serializable] public struct weapon_struct
     {
@@ -17,11 +22,19 @@ public class Player_attack : MonoBehaviour
     public weapon_struct curr_weapon;
     private int weapon_index;
 
+
     private float attack_freq;
     private float timer;
+    //false - vlavo, true - vpravo
+    private bool attack_side;
     
     void Start()
     {
+        //getneme weapons objekt, co je rodic rodica konkretnej zbrane
+        weapon_holder = transform.GetChild(0).gameObject;
+        //ziskame skript controlleru
+        player_main_script=GetComponent<Player_controller>();
+        attack_side=true;
         timer=0;
 
         //vypneme vsetky zbrane
@@ -32,13 +45,13 @@ public class Player_attack : MonoBehaviour
 
         weapon_index=0;
         curr_weapon = weapons[weapon_index];
-        curr_weapon.weapon_object.transform.localScale = Vector3.zero;
-        curr_weapon.weapon_object.SetActive(true); 
         attack_freq=curr_weapon.attack_freq;
     }
 
     void Update()
     {
+        //nastavime stranu utoku
+        attack_side=player_main_script.is_facing_right;
         timer-=Time.deltaTime;
         if (timer < 0)
         {
@@ -47,7 +60,7 @@ public class Player_attack : MonoBehaviour
         //po 0.2 sekundy zbran zmizne
         if (timer <= attack_freq-0.2)
         {
-            curr_weapon.weapon_object.transform.localScale = Vector3.zero;
+            curr_weapon.weapon_object.SetActive(false);
         }
 
         if (Input.GetKeyDown("space"))
@@ -68,13 +81,23 @@ public class Player_attack : MonoBehaviour
     void Attack()
     {
         Debug.Log("uttttooooook");
-        timer=attack_freq;
-        curr_weapon.weapon_object.transform.localScale = new Vector3(1,1,1);
-    }
 
+        timer=attack_freq;
+
+        //zmena strany a rotacie podla posledneho stlacenia pohybu (A/D alebo </>)
+        if (attack_side)
+        {
+            weapon_holder.transform.rotation=Quaternion.Euler(0,0,0); 
+        }
+        else
+        {
+            weapon_holder.transform.rotation=Quaternion.Euler(0,-180,0);
+        }
+
+        curr_weapon.weapon_object.SetActive(true);
+    }
     void Equip_weapon()
     {
-        curr_weapon.weapon_object.transform.localScale = Vector3.zero;
         curr_weapon.weapon_object.SetActive(false);
         curr_weapon=default;
 
@@ -93,8 +116,7 @@ public class Player_attack : MonoBehaviour
 
         Debug.Log("on weapon index: "+weapon_index);
         curr_weapon=weapons[weapon_index];
-        curr_weapon.weapon_object.transform.localScale = Vector3.zero;
-        curr_weapon.weapon_object.SetActive(true);
+        curr_weapon.weapon_object.SetActive(false);
         attack_freq=curr_weapon.attack_freq;
         
     }

@@ -2,18 +2,24 @@ using UnityEngine;
 
 public class Enemy_ai : MonoBehaviour
 {
+    //enemy variables
     public int damage;
-    public float detection_distance;
     public float walk_speed;
+
+    //hit variables
+    public bool is_knocked_back;
+    
+    //detection and chase variables
     private bool chasing;
+    public float detection_distance;
     private Transform player;
     private CircleCollider2D vision_field;
-    private Transform enemyRoot;
     private Rigidbody2D body;
     void Start()
     {
         chasing=false;
         player=null;
+        is_knocked_back=false;
         vision_field = GetComponent<CircleCollider2D>();
         vision_field.radius = detection_distance;
         body=transform.root.GetComponent<Rigidbody2D>();
@@ -35,15 +41,17 @@ public class Enemy_ai : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        if (chasing && player != null)
+        if (!is_knocked_back)
         {
-            Vector2 direction = ((Vector2)player.position - body.position).normalized;
-            body.linearVelocity = direction * walk_speed;
-        }
-        else
-        {
-            body.linearVelocity = Vector2.zero;
+            if (chasing && player != null)
+            {
+                Vector2 direction = ((Vector2)player.position - body.position).normalized;
+                body.linearVelocity = direction * walk_speed;
+            }
+            else
+            {
+                body.linearVelocity = Vector2.zero;
+            }
         }
     }
     
