@@ -11,6 +11,7 @@ TagManager:
   - to_elevator
   - Enemy
   - weapon
+  - enemy_weapon
   layers:
   - Default
   - TransparentFX
