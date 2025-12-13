@@ -9,11 +9,12 @@ public class Player_attack : MonoBehaviour
         public GameObject weapon_object;
         public float attack_freq;
         public int damage;
+        public float knockback;
         public bool is_acq;
     }
 
     public weapon_struct[] weapons;
-    private weapon_struct curr_weapon;
+    public weapon_struct curr_weapon;
     private int weapon_index;
 
     private float attack_freq;
@@ -69,14 +70,6 @@ public class Player_attack : MonoBehaviour
         Debug.Log("uttttooooook");
         timer=attack_freq;
         curr_weapon.weapon_object.transform.localScale = new Vector3(1,1,1);
-
-        /*
-        Collider2D[] hit_ememies = Physics2D.OverlapCircleAll(curr_weapon.weapon_object.transform.position, 1, 2);
-        foreach(Collider2D enemy in hit_ememies)
-        {
-            Debug.Log(enemy.name);
-        }*/
-
     }
 
     void Equip_weapon()

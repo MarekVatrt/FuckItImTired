@@ -11909,58 +11909,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1347561296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7647173229629754580, guid: f538208b43343db4ab860d5d717b3a4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4606265052039312515}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1347561299
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347561296}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 0.9375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.9375, y: 0.9375}
-  m_EdgeRadius: 0
 --- !u!1 &1577047328
 GameObject:
   m_ObjectHideFlags: 0
@@ -14157,6 +14105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680959215993955693, guid: d12d1c31755dba042bcc8dd57ad420e8,
+        type: 3}
+      propertyPath: walk_speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18717,6 +18670,21 @@ PrefabInstance:
       propertyPath: weapons.Array.data[2].is_acq
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7720096531722780701, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: weapons.Array.data[0].knockback
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -7720096531722780701, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: weapons.Array.data[1].knockback
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: -7720096531722780701, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: weapons.Array.data[2].knockback
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1080639666035555349, guid: f538208b43343db4ab860d5d717b3a4e,
         type: 3}
       propertyPath: m_Size.y
@@ -18726,6 +18694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160738749720967557, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: m_TagString
+      value: weapon
       objectReference: {fileID: 0}
     - target: {fileID: 1422154642446945985, guid: f538208b43343db4ab860d5d717b3a4e,
         type: 3}
@@ -18746,6 +18719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487506341983479747, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: m_TagString
+      value: weapon
       objectReference: {fileID: 0}
     - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
         type: 3}
@@ -18797,6 +18775,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7647173229629754580, guid: f538208b43343db4ab860d5d717b3a4e,
+        type: 3}
+      propertyPath: m_TagString
+      value: weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 8355643197305080771, guid: f538208b43343db4ab860d5d717b3a4e,
         type: 3}
       propertyPath: m_SortingLayer
@@ -18819,10 +18802,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4606265052039312517}
-    - targetCorrespondingSourceObject: {fileID: 7647173229629754580, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1347561299}
   m_SourcePrefab: {fileID: 100100000, guid: f538208b43343db4ab860d5d717b3a4e, type: 3}
 --- !u!4 &4606265052039312516 stripped
 Transform:

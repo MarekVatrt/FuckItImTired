@@ -10,6 +10,7 @@ TagManager:
   - score_point
   - to_elevator
   - Enemy
+  - weapon
   layers:
   - Default
   - TransparentFX
