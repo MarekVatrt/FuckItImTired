@@ -7,6 +7,7 @@ public class Enemy_ai : MonoBehaviour
     GameObject weapon_holder;
     //enemy variables
     public int damage;
+    public float knockback;
     public float settable_walk_speed;
     private float walk_speed;
     //ak je player in range, attack
@@ -54,7 +55,7 @@ public class Enemy_ai : MonoBehaviour
         {
             if (chasing && player != null)
             {
-                Debug.Log("hybemee");
+                //Debug.Log("hybemee");
                 Vector2 direction = ((Vector2)player.position - body.position).normalized;
                 get_dominant_direction(direction);
                 body.linearVelocity = direction * walk_speed;

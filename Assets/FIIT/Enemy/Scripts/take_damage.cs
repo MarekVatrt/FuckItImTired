@@ -40,7 +40,7 @@ public class take_damage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("weapon"))
+        if (other.CompareTag("weapon"))
         {
             Player_attack weapons_script = other.transform.root.GetComponent<Player_attack>();
             player_position=other.transform.position;
@@ -48,10 +48,10 @@ public class take_damage : MonoBehaviour
             damage_taken=weapons_script.curr_weapon.damage;
             knockback_taken=weapons_script.curr_weapon.knockback;
 
-            take_attack(player_position);
+            take_attack();
         }
     }
-    void take_attack(Vector2 knock_from)
+    void take_attack()
     {
         //nastavime na true, aby nahananie playera v enemy_ai neoverwritlo knockback
         vision_field_script.is_knocked_back=true;

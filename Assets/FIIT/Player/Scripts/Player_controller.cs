@@ -11,32 +11,26 @@ public class Player_controller : MonoBehaviour{
     private Rigidbody2D body;
     private Vector2 xy;
 
-    public bool is_facing_right;
+    public int facing_direction;
+
+    public bool is_knocked_back;
 
     
     void Start(){
-        is_facing_right=true;
+        facing_direction=1;
         body=GetComponent<Rigidbody2D>();
     }
 
     void Update(){
 
-        //move, TODO asi prerobit nech to hned nacitava do vectora
         float x=Input.GetAxisRaw("Horizontal");
         float y=Input.GetAxisRaw("Vertical");
 
-        //nastavime stranu, na ktoru bol naposledy obrateny player
-        // pre attacking script
-        if (x > 0)
-        {
-            is_facing_right=true;
-        }
-        else if (x < 0)
-        {
-            is_facing_right=false;
-        }
-
         xy= new Vector2(x,y).normalized;
+
+        //nastavime stranu, na ktoru bol naposledy obrateny player
+        // pre attacking script, skopirovane a upravene z enemy_ai
+        get_dominant_direction(xy);
 
         if(x!=0){
             if(x>0){
@@ -77,8 +71,46 @@ public class Player_controller : MonoBehaviour{
 
     void FixedUpdate()
     {
-        Vector2 velocity = xy * move_speed;
-        body.linearVelocity = velocity; 
+        //ak sme boli hitnuty, nachvilu zastavime, aby mohol prebehnut knockback
+        if (!is_knocked_back)
+        {
+            Vector2 velocity = xy * move_speed;
+            body.linearVelocity = velocity; 
+        }
+    }
+
+    void get_dominant_direction(Vector2 direction)
+    {
+        //ak sa hrac nehybe
+        if (direction.x == 0 && direction.y == 0)
+        {
+            //default attack direction bude vpravo
+            facing_direction=1;
+        }
+        //zistime ci je dominantne x alebo y (horizontal alebo vertical movement)
+        else if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if (direction.x > 0)
+            {
+                facing_direction = 1; 
+            }
+            else
+            {
+                facing_direction = 2; 
+            }
+        }
+        else
+        {
+            if (direction.y > 0)
+            {
+                facing_direction = 3; 
+            }
+            else
+            {
+                facing_direction = 4; 
+            }
+        }
+        
     }
 
     void Interact(){

@@ -5,7 +5,7 @@ public class Player_attack : MonoBehaviour
 {
     //potrebujem script aby som zistil na ktoru stranu bol hrac naposledy otoceny
     //do tej strany zautoci
-    Player_controller player_main_script;
+    Player_controller player_controller_script;
     //budeme flipovat weapons object
     GameObject weapon_holder;
     
@@ -26,15 +26,15 @@ public class Player_attack : MonoBehaviour
     private float attack_freq;
     private float timer;
     //false - vlavo, true - vpravo
-    private bool attack_side;
+    private int attack_orientation;
     
     void Start()
     {
         //getneme weapons objekt, co je rodic rodica konkretnej zbrane
         weapon_holder = transform.GetChild(0).gameObject;
         //ziskame skript controlleru
-        player_main_script=GetComponent<Player_controller>();
-        attack_side=true;
+        player_controller_script=GetComponent<Player_controller>();
+        attack_orientation=1;
         timer=0;
 
         //vypneme vsetky zbrane
@@ -50,8 +50,6 @@ public class Player_attack : MonoBehaviour
 
     void Update()
     {
-        //nastavime stranu utoku
-        attack_side=player_main_script.is_facing_right;
         timer-=Time.deltaTime;
         if (timer < 0)
         {
@@ -84,15 +82,8 @@ public class Player_attack : MonoBehaviour
 
         timer=attack_freq;
 
-        //zmena strany a rotacie podla posledneho stlacenia pohybu (A/D alebo </>)
-        if (attack_side)
-        {
-            weapon_holder.transform.rotation=Quaternion.Euler(0,0,0); 
-        }
-        else
-        {
-            weapon_holder.transform.rotation=Quaternion.Euler(0,-180,0);
-        }
+        //nastavime orientaciu utoku
+        set_weapon_orientation();
 
         curr_weapon.weapon_object.SetActive(true);
     }
@@ -119,6 +110,35 @@ public class Player_attack : MonoBehaviour
         curr_weapon.weapon_object.SetActive(false);
         attack_freq=curr_weapon.attack_freq;
         
+    }
+    void set_weapon_orientation()
+    {
+        attack_orientation=player_controller_script.facing_direction;
+        //utok hore,dole, doprava, dolava
+        switch (attack_orientation)
+        {
+            //doprava
+            case 1:
+                weapon_holder.transform.localPosition= new Vector3(0,0,0);
+                weapon_holder.transform.localRotation=Quaternion.Euler(0f, 0f, 0f);
+                break;
+            //dolava
+            case 2:
+                weapon_holder.transform.localPosition= new Vector3(0,0,0);
+                weapon_holder.transform.localRotation=Quaternion.Euler(0f, -180f, 0f);
+                break;
+            //hore
+            case 3:
+                weapon_holder.transform.localPosition= new Vector3(-0.38f,0.27f,0);
+                weapon_holder.transform.localRotation=Quaternion.Euler(0f, 0f, 86f);
+                break;
+            //dole
+            case 4:
+                weapon_holder.transform.localPosition= new Vector3(-0.38f,-0.1f,0);
+                weapon_holder.transform.localRotation=Quaternion.Euler(180f, 0f, 86f);
+                break;
+        }
+        Debug.Log("orientacia je "+attack_orientation);
     }
     
 }
