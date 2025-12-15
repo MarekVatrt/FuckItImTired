@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class game_manager : MonoBehaviour
@@ -8,7 +9,7 @@ public class game_manager : MonoBehaviour
     public Card_script first_card;
     public Card_script second_card;
     public int cards_clicked;
-    private int score;
+    public int score;
 
     //aby mal hrac cas si pozriet karty
     public bool is_checking = false;
@@ -43,11 +44,22 @@ public class game_manager : MonoBehaviour
 
         if (first_card.card_id == second_card.card_id)
         {
+            Debug.Log(first_card.card_id);
+            Debug.Log(second_card.card_id);
             Debug.Log("yippee a match");
             
-            //odstranime karty
-            first_card.gameObject.SetActive(false);
-            second_card.gameObject.SetActive(false); 
+            //odstranime karty (nastavime front a back na false), nie samotnu kartu, lebo bz zmizla
+            //ak by karta zmizla grid by sa automaticky rearangol
+            first_card.transform.GetChild(0).gameObject.SetActive(false);
+            first_card.transform.GetChild(1).gameObject.SetActive(false);
+            //zaroven vypneme script aby sa na nu nedalo kliknut
+            first_card.GetComponent<Card_script>().enabled=false;
+
+
+            second_card.transform.GetChild(0).gameObject.SetActive(false);
+            second_card.transform.GetChild(1).gameObject.SetActive(false);
+            second_card.GetComponent<Card_script>().enabled=false;
+            //second_card.gameObject.SetActive(false); 
             
             add_score();
         }
@@ -71,31 +83,7 @@ public class game_manager : MonoBehaviour
 
     void Update()
     {
-        //budeme kontrolovat ci su 2 karty otocene
-        /*if (first_card_flipped && second_card_flipped)
-        {
-            if (first_card.card_id == second_card.card_id)
-            {
-                Debug.Log("a pair");
-                //ak mame zhodu, znicime karty a pridame bod
-                Destroy(first_card.gameObject);
-                Destroy(second_card.gameObject);
-                add_score();
-            }
-            else
-            {
-                Debug.Log("not a pair");
-                //inak otocime karty naspat
-                first_card.flip_back();
-                second_card.flip_back();
-            }
-
-            first_card=null;
-            second_card=null;
-            first_card_flipped=false;
-            second_card_flipped=false;
-            cards_clicked=0;
-        }*/
+        
     }
 
     void add_score()
