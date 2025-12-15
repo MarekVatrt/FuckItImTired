@@ -9,6 +9,7 @@ public class grid_script : MonoBehaviour
     //scripty od karticiek, pouzijeme v nich fnkciu make_card
     //na randomne priradene id a sprite
     private Card_script[] card_scripts;
+
     void Start()
     {
         //gettneme vsetky card scripts
