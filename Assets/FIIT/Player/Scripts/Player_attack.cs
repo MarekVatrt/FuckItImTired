@@ -23,9 +23,8 @@ public class Player_attack : MonoBehaviour
     private int weapon_index;
 
 
-    private float attack_freq;
-    private float timer;
-    //false - vlavo, true - vpravo
+    public float attack_freq;
+    public float timer;
     private int attack_orientation;
     
     void Start()

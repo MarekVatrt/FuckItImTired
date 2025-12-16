@@ -50,17 +50,17 @@ public class Player_controller : MonoBehaviour
 
         //nastavime stranu, na ktoru bol naposledy obrateny player
         // pre attacking script, skopirovane a upravene z enemy_ai
-        get_dominant_direction(xy);
+        //zistil som ze lepsie je menit tu facing_diretion nizsie v kode, kde nacitavam aj animacie xd
+        //get_dominant_direction(xy);
 
-        if (x != 0)
-        {
-            if (x > 0)
-            {
-                animator.SetBool("is_walking_right", true);
+        if(x!=0){
+            if(x>0){
+                facing_direction=1;
+                animator.SetBool("is_walking_right",true);
             }
-            if (x < 0)
-            {
-                animator.SetBool("is_walking_left", true);
+            if(x<0){
+                facing_direction=2;
+                animator.SetBool("is_walking_left",true);
             }
         }
         else
@@ -68,15 +68,14 @@ public class Player_controller : MonoBehaviour
             animator.SetBool("is_walking_left", false);
             animator.SetBool("is_walking_right", false);
         }
-        if (y != 0)
-        {
-            if (y > 0)
-            {
-                animator.SetBool("is_walking_up", true);
+        if(y!=0){
+            if(y>0){
+                facing_direction=3;
+                animator.SetBool("is_walking_up",true);
             }
-            else if (y < 0)
-            {
-                animator.SetBool("is_walking_down", true);
+            else if(y<0){
+                facing_direction=4;
+                animator.SetBool("is_walking_down",true);
             }
         }
         else
@@ -107,40 +106,6 @@ public class Player_controller : MonoBehaviour
             Vector2 velocity = xy * stats.CurrentMoveSpeed;
             body.linearVelocity = velocity;
         }
-    }
-
-    void get_dominant_direction(Vector2 direction)
-    {
-        //ak sa hrac nehybe
-        if (direction.x == 0 && direction.y == 0)
-        {
-            //default attack direction bude vpravo
-            facing_direction = 1;
-        }
-        //zistime ci je dominantne x alebo y (horizontal alebo vertical movement)
-        else if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            if (direction.x > 0)
-            {
-                facing_direction = 1;
-            }
-            else
-            {
-                facing_direction = 2;
-            }
-        }
-        else
-        {
-            if (direction.y > 0)
-            {
-                facing_direction = 3;
-            }
-            else
-            {
-                facing_direction = 4;
-            }
-        }
-
     }
 
     void Interact()
