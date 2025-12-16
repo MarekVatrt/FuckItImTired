@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
         item.Use(player);
 
         // Consume if power-up
-        if (item.itemType == ItemType.PowerUp)
+        if (item.itemType == ItemType.PowerUp && item.isConsumed)
         {
             RemoveItem(item, 1);
             OnInventoryChanged?.Invoke(); // notify UI

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: speedPowerUp
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpItem
   itemName: speed boost
-  description: Thi power up item boosts players movement speed for 10 seconds
+  description: This power up item boosts players movement speed for 10 seconds
   icon: {fileID: -7512326813324254173, guid: c397b3aba29d3634b802011594921d5b, type: 3}
   stackable: 1
-  maxStack: 1
+  maxStack: 10
   itemType: 1
   healthRestore: 0
-  speedBoost: 50
+  speedBoost: 5
   boostDuration: 10

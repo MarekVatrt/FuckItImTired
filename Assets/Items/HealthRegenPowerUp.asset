@@ -16,7 +16,7 @@ MonoBehaviour:
   description: This power up instantly regenerates 20 HP to a player
   icon: {fileID: 4496536969523497911, guid: 638684f3f6a383f4fb2620be3f88b792, type: 3}
   stackable: 1
-  maxStack: 1
+  maxStack: 5
   itemType: 1
   healthRestore: 20
   speedBoost: 0

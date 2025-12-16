@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a874c7e6c8c0bd447bc996991d12305d, type: 3}
-  m_Name: HealthBoostPowerUp
+  m_Name: KnockbackBoostPowerUp
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpItem
-  itemName: HealthBoost
-  description: This power up will double players health
-  icon: {fileID: -8121232332041456058, guid: a5adb2b316276be4cbd7ca8027e984ce, type: 3}
+  itemName: knockback_boost
+  description: this item doubles players knockback for 10 seconds
+  icon: {fileID: -383205681444083549, guid: 330afa4dfd8c2814e822f2d02c1540e8, type: 3}
   stackable: 1
-  maxStack: 1
+  maxStack: 5
+  isConsumed: 1
   itemType: 1
   healthRestore: 0
   speedBoost: 0
   boostDuration: 10
-  isHealthPowerUp: 1
+  isHealthPowerUp: 0
   isDamagePowerUp: 0
+  isKnockbackPowerUp: 1
