@@ -68,9 +68,10 @@ public class Player_controller : MonoBehaviour{
             Interact();
         }
 
-        if(Input.GetKeyDown("i")){
-            Inventory();
-        }
+        // Inventory UI should control itself
+        // if(Input.GetKeyDown("i")){
+        //     Inventory();
+        // }
 
     }
 
@@ -88,7 +89,9 @@ public class Player_controller : MonoBehaviour{
         Debug.Log("interacted");
     }
 
-    void Inventory(){
-        Debug.Log("Opened inv");
-    }
+    // Player controller should NOT handle inventory
+    // keep that for Assets/UI/InventoryUI
+    // void Inventory(){
+    //     Debug.Log("Opened inv");
+    // }
 }
