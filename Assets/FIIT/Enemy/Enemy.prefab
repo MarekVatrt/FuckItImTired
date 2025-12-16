@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 272163139812583640}
   - component: {fileID: 8041609334226627505}
   - component: {fileID: 8546834534144952434}
+  - component: {fileID: 2128446565873636350}
   m_Layer: 23
   m_Name: Enemy
   m_TagString: Enemy
@@ -626,6 +627,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2128446565873636350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968578941639989606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27505dc98845efa44b3d88d87d3bec12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDropTable
+  possibleDrops:
+  - dropPrefab: {fileID: 7689154513966406902, guid: 272f1d2fc232aa2449836248f7e9eae0,
+      type: 3}
+    dropChance: 0.5
+  - dropPrefab: {fileID: 3266132874194314618, guid: dd62b24b2d304634e96a7293080a054e,
+      type: 3}
+    dropChance: 0.5
+  - dropPrefab: {fileID: 5991056901047911233, guid: 34b32904c46ff7a4ea7753c59fa26597,
+      type: 3}
+    dropChance: 0.5
+  - dropPrefab: {fileID: 1124898264076903204, guid: fc2341e8a4397f14d8a068038d76d164,
+      type: 3}
+    dropChance: 0.5
+  - dropPrefab: {fileID: 2337901669216288012, guid: 08c80554c5964674aacef8b480cce0ad,
+      type: 3}
+    dropChance: 0.5
 --- !u!1 &5635270583334946346
 GameObject:
   m_ObjectHideFlags: 0

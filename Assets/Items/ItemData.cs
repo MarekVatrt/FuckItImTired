@@ -18,6 +18,7 @@ public abstract class ItemData : ScriptableObject
     [Header("Inventory")]
     public bool stackable = true;
     public int maxStack = 99;
+    public bool isConsumed=true;
     public ItemType itemType;
 
     // Called when player clicks the item in inventory

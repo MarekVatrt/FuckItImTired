@@ -8,8 +8,9 @@ public class Player_attack : MonoBehaviour
     Player_controller player_controller_script;
     //budeme flipovat weapons object
     GameObject weapon_holder;
-    
-    [System.Serializable] public struct weapon_struct
+
+    [System.Serializable]
+    public struct weapon_struct
     {
         public GameObject weapon_object;
         public float attack_freq;
@@ -26,36 +27,36 @@ public class Player_attack : MonoBehaviour
     public float attack_freq;
     public float timer;
     private int attack_orientation;
-    
+
     void Start()
     {
         //getneme weapons objekt, co je rodic rodica konkretnej zbrane
         weapon_holder = transform.GetChild(0).gameObject;
         //ziskame skript controlleru
-        player_controller_script=GetComponent<Player_controller>();
-        attack_orientation=1;
-        timer=0;
+        player_controller_script = GetComponent<Player_controller>();
+        attack_orientation = 1;
+        timer = 0;
 
         //vypneme vsetky zbrane
-        foreach(weapon_struct weapon in weapons)
+        foreach (weapon_struct weapon in weapons)
         {
             weapon.weapon_object.SetActive(false);
         }
 
-        weapon_index=0;
+        weapon_index = 0;
         curr_weapon = weapons[weapon_index];
-        attack_freq=curr_weapon.attack_freq;
+        attack_freq = curr_weapon.attack_freq;
     }
 
     void Update()
     {
-        timer-=Time.deltaTime;
+        timer -= Time.deltaTime;
         if (timer < 0)
         {
-            timer=0;
+            timer = 0;
         }
         //po 0.2 sekundy zbran zmizne
-        if (timer <= attack_freq-0.2)
+        if (timer <= attack_freq - 0.2)
         {
             curr_weapon.weapon_object.SetActive(false);
         }
@@ -75,11 +76,24 @@ public class Player_attack : MonoBehaviour
         }
     }
 
+    public int GetCurrentDamage()
+    {
+        PlayerStats stats = GetComponent<PlayerStats>();
+        return Mathf.RoundToInt(curr_weapon.damage * stats.DamageMultiplier);
+    }
+
+    public int GetCurrentKnockback()
+    {
+        PlayerStats stats = GetComponent<PlayerStats>();
+        return Mathf.RoundToInt(curr_weapon.knockback * stats.KnockbackMultiplier);
+    }
+
+
     void Attack()
     {
         Debug.Log("uttttooooook");
 
-        timer=attack_freq;
+        timer = attack_freq;
 
         //nastavime orientaciu utoku
         set_weapon_orientation();
@@ -89,55 +103,57 @@ public class Player_attack : MonoBehaviour
     void Equip_weapon()
     {
         curr_weapon.weapon_object.SetActive(false);
-        curr_weapon=default;
+        curr_weapon = default;
 
         weapon_index++;
-        if (weapon_index >= weapons.Length){
-            weapon_index=0;
+        if (weapon_index >= weapons.Length)
+        {
+            weapon_index = 0;
         }
         while (weapons[weapon_index].is_acq != true)
         {
             Debug.Log("In while");
             weapon_index++;
-            if (weapon_index >= weapons.Length){
-                weapon_index=0;
+            if (weapon_index >= weapons.Length)
+            {
+                weapon_index = 0;
             }
         }
 
-        Debug.Log("on weapon index: "+weapon_index);
-        curr_weapon=weapons[weapon_index];
+        Debug.Log("on weapon index: " + weapon_index);
+        curr_weapon = weapons[weapon_index];
         curr_weapon.weapon_object.SetActive(false);
-        attack_freq=curr_weapon.attack_freq;
-        
+        attack_freq = curr_weapon.attack_freq;
+
     }
     void set_weapon_orientation()
     {
-        attack_orientation=player_controller_script.facing_direction;
+        attack_orientation = player_controller_script.facing_direction;
         //utok hore,dole, doprava, dolava
         switch (attack_orientation)
         {
             //doprava
             case 1:
-                weapon_holder.transform.localPosition= new Vector3(0,0,0);
-                weapon_holder.transform.localRotation=Quaternion.Euler(0f, 0f, 0f);
+                weapon_holder.transform.localPosition = new Vector3(0, 0, 0);
+                weapon_holder.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             //dolava
             case 2:
-                weapon_holder.transform.localPosition= new Vector3(0,0,0);
-                weapon_holder.transform.localRotation=Quaternion.Euler(0f, -180f, 0f);
+                weapon_holder.transform.localPosition = new Vector3(0, 0, 0);
+                weapon_holder.transform.localRotation = Quaternion.Euler(0f, -180f, 0f);
                 break;
             //hore
             case 3:
-                weapon_holder.transform.localPosition= new Vector3(-0.38f,0.27f,0);
-                weapon_holder.transform.localRotation=Quaternion.Euler(0f, 0f, 86f);
+                weapon_holder.transform.localPosition = new Vector3(-0.38f, 0.27f, 0);
+                weapon_holder.transform.localRotation = Quaternion.Euler(0f, 0f, 86f);
                 break;
             //dole
             case 4:
-                weapon_holder.transform.localPosition= new Vector3(-0.38f,-0.1f,0);
-                weapon_holder.transform.localRotation=Quaternion.Euler(180f, 0f, 86f);
+                weapon_holder.transform.localPosition = new Vector3(-0.38f, -0.1f, 0);
+                weapon_holder.transform.localRotation = Quaternion.Euler(180f, 0f, 86f);
                 break;
         }
-        Debug.Log("orientacia je "+attack_orientation);
+        Debug.Log("orientacia je " + attack_orientation);
     }
-    
+
 }
