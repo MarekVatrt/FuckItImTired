@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -6,10 +7,12 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
 
     [Header("Inventory Settings")]
-    public int maxSlots = 20;
+    public int maxSlots = 15;
 
     [Header("Inventory Data")]
     public List<InventorySlot> inventory = new List<InventorySlot>();
+    // event pre callnutie UI refreshu
+    public event Action OnInventoryChanged;
 
     private void Awake()
     {
@@ -64,6 +67,7 @@ public class InventoryManager : MonoBehaviour
         }
 
         Debug.Log($"Added {item.itemName} to inventory");
+        OnInventoryChanged?.Invoke(); // notify UI
         return true;
     }
 
@@ -103,6 +107,7 @@ public class InventoryManager : MonoBehaviour
         if (item.itemType == ItemType.PowerUp)
         {
             RemoveItem(item, 1);
+            OnInventoryChanged?.Invoke(); // notify UI
         }
     }
 }

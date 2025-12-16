@@ -20,6 +20,6 @@ public class PowerUpItem : ItemData
 
         // Example effects (we'll implement later)
         // player.GetComponent<PlayerHealth>().Heal(healthRestore);
-        // player.GetComponent<PlayerStats>().BoostSpeed(speedBoost, boostDuration);
+        player.GetComponent<PlayerStats>().BoostSpeed(speedBoost, boostDuration);
     }
 }

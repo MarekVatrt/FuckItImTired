@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a874c7e6c8c0bd447bc996991d12305d, type: 3}
+  m_Name: speedPowerUp
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpItem
+  itemName: speed boost
+  description: Thi power up item boosts players movement speed for 10 seconds
+  icon: {fileID: -7512326813324254173, guid: c397b3aba29d3634b802011594921d5b, type: 3}
+  stackable: 1
+  maxStack: 1
+  itemType: 1
+  healthRestore: 0
+  speedBoost: 50
+  boostDuration: 10

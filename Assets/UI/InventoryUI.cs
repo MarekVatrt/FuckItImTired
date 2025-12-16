@@ -16,17 +16,42 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void Toggle()
+    public void Toggle()
     {
         Debug.Log("Inventory UI toggled");
-
         isOpen = !isOpen;
+        // zapneme inventory UI
         inventoryPanel.SetActive(isOpen);
+
+        // pomocou timeScale Pauzneme hru aby sa veci zastavili
+        if (isOpen)
+        {
+            Time.timeScale = 0f;
+            Player_controller.inputLocked = true;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            Player_controller.inputLocked = false;
+        }
+
 
         if (isOpen)
             Refresh();
     }
 
+
+    private void OnEnable()
+    {
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.OnInventoryChanged += Refresh;
+    }
+
+    private void OnDisable()
+    {
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.OnInventoryChanged -= Refresh;
+    }
 
     void Refresh()
     {
