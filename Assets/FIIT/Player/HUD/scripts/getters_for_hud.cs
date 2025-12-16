@@ -18,12 +18,35 @@ public class getters_for_hud : MonoBehaviour
     private GameObject last_checked_weapon_object;
     private PlayerStats stats;
 
+    //na schovanie HUD (napr v minigames)
+    public bool enable_hud;
+    private Canvas HUD;
 
     //povodne bez vsetkych check-ov, potom som ich pridal vsade, lebo neustale hadzalo NullExepti..
     //pravdepodobne kvoli nacasovaniu vzniku weapon objektov a vzniku tohto scriptu zaroven
     //weapons sa nestihnu inicializovat skor ako sa spusti tento skript
     void Start()
     {
+
+        HUD=GetComponent<Canvas>();
+        //ak chceme skryt HUD
+        //napr v nejakych minigames
+        HUD.enabled=enable_hud;
+        /*if (!enable_hud)
+        {
+            HUD.enabled=false;
+        }
+        else
+        {
+            HUD.enabled=true;
+        }*/
+        
+        //gettneme canvas objekty
+        healthbar=transform.GetChild(0).GetComponent<Slider>();
+        attack_bar=transform.GetChild(1).GetComponent<Slider>();
+        health_text=transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        weapon_image=transform.GetChild(3).GetChild(3).GetChild(0).GetComponent<Image>();
+
         //gettneme si skripty
         attack_script = transform.parent.GetComponentInChildren<Player_attack>();
         // health_script = transform.parent.GetComponentInChildren<take_damage_player>();
@@ -52,6 +75,9 @@ public class getters_for_hud : MonoBehaviour
 
     void Update()
     {
+        
+        HUD.enabled=enable_hud;
+
         if (healthbar != null && stats != null)
         {
             healthbar.maxValue = stats.MaxHealth;

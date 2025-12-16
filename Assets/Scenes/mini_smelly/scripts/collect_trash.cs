@@ -4,11 +4,12 @@ using TMPro;
 
 public class collect_trash : MonoBehaviour
 {
-    [SerializeField] private int trash_count;
+    private int trash_count;
     [SerializeField] private TextMeshProUGUI text_field;
     public int curr_trash;
     void Start()
     {
+        trash_count=transform.childCount;
         curr_trash=0;
     }
 
