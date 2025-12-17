@@ -235,4 +235,4 @@ MonoBehaviour:
   blocked_layers:
     serializedVersion: 2
     m_Bits: 7340032
-  spawning_enabled: 1
+  spawning_enabled: 0

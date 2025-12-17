@@ -18,6 +18,9 @@ TagManager:
   - to_groud_up
   - to_ground_library
   - to_ground_up
+  - to_fiitfood
+  - to_first_floor
+  - to_library
   layers:
   - Default
   - TransparentFX

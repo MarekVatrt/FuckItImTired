@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 31528302}
   - component: {fileID: 31528301}
   m_Layer: 5
-  m_Name: enemy_score
+  m_Name: time_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Enemy score:'
+  m_text: 'Time left:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ba62de1edc167943a27e3bc51828adc, type: 2}
   m_sharedMaterial: {fileID: -6098706170142012841, guid: 9ba62de1edc167943a27e3bc51828adc,
@@ -618,9 +618,9 @@ GameObject:
   - component: {fileID: 238905432}
   - component: {fileID: 238905435}
   - component: {fileID: 238905434}
-  - component: {fileID: 238905433}
+  - component: {fileID: 238905436}
   m_Layer: 5
-  m_Name: score
+  m_Name: time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,19 +645,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &238905433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238905431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8bcada1998d1704eb57634c17998339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::get_score
-  manager_script: {fileID: 0}
 --- !u!114 &238905434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,6 +745,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238905431}
   m_CullTransparentMesh: 1
+--- !u!114 &238905436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238905431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3212b9e386a5c4e9239b6e1151d6e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::get_time
+  manager_script: {fileID: 0}
 --- !u!1001 &264111455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4050,10 +4050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::grid_script
   front_sprites:
-  - {fileID: -1894455521, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
-  - {fileID: -1217593654, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
-  - {fileID: -412920573, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
-  - {fileID: 1875058046, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
+  - {fileID: 21300000, guid: e9e84c8c84709a846bb15bf5b88503f3, type: 3}
+  - {fileID: 21300000, guid: b1f3fcfff1caee14892309f4d987b7d7, type: 3}
+  - {fileID: 21300000, guid: d012a4de59bceaf4a8dac4ac5883e615, type: 3}
+  - {fileID: 21300000, guid: b4357cf9e7955f94298d17a428aa4108, type: 3}
   - {fileID: 1221632318, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
   - {fileID: 1170314424, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
   - {fileID: -273107576, guid: ec22a44967af2b64694b4b1a1d268355, type: 3}
@@ -4082,6 +4082,8 @@ MonoBehaviour:
   score: 0
   is_checking: 0
   match_delay: 2.5
+  has_beer: 0
+  game_timer: 0
 --- !u!1001 &7275499554647889715
 PrefabInstance:
   m_ObjectHideFlags: 0

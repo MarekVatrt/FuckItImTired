@@ -84,18 +84,6 @@ public class Player_controller : MonoBehaviour
             animator.SetBool("is_walking_down", false);
         }
 
-
-        //interact
-        if (Input.GetKeyDown("e"))
-        {
-            Interact();
-        }
-
-        // Inventory UI should control itself
-        // if(Input.GetKeyDown("i")){
-        //     Inventory();
-        // }
-
     }
 
     void FixedUpdate()
@@ -107,15 +95,4 @@ public class Player_controller : MonoBehaviour
             body.linearVelocity = velocity;
         }
     }
-
-    void Interact()
-    {
-        Debug.Log("interacted");
-    }
-
-    // Player controller should NOT handle inventory
-    // keep that for Assets/UI/InventoryUI
-    // void Inventory(){
-    //     Debug.Log("Opened inv");
-    // }
 }

@@ -31,6 +31,21 @@ public class Scene_changer : MonoBehaviour
         {
             SceneManager.LoadScene("ground_floor");
         }
+
+        if (collider.CompareTag("to_fiitfood"))
+        {
+            SceneManager.LoadScene("fiitfood");
+        }
+
+        if (collider.CompareTag("to_first_floor"))
+        {
+            SceneManager.LoadScene("first_floor");
+        }
+
+        if (collider.CompareTag("to_library"))
+        {
+            SceneManager.LoadScene("library");
+        }
         
         //TODO pridat vsetky ground floor transitions
     }
