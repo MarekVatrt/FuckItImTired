@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
     private Coroutine knockbackBoostRoutine;
     private Coroutine speedBoostRoutine;
     private Coroutine healthBoostRoutine;
+    private Coroutine DrunkRoutine;
 
     void Awake()
     {
@@ -47,6 +48,26 @@ public class PlayerStats : MonoBehaviour
         // CurrentHealth = maxHealth;
 
     }
+    // ===== DEBUFFS =====
+    public void DrunkDebuff(float duration)
+    {
+        if (DrunkRoutine != null)
+            StopCoroutine(DrunkRoutine);
+
+        DrunkRoutine = StartCoroutine(DrunkCoroutine(duration));
+    }
+
+    private IEnumerator DrunkCoroutine(float duration)
+    {
+        Player_controller.Instance.reverseHorizontal = true;
+        Player_controller.Instance.reverseVertical = true;
+
+        yield return new WaitForSeconds(duration);
+
+        Player_controller.Instance.reverseHorizontal = false;
+        Player_controller.Instance.reverseVertical = false;
+    }
+
 
     // ===== BUFFS =====
 

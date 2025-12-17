@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -6,7 +7,10 @@ public class InventoryUI : MonoBehaviour
     public Transform gridParent;
     public GameObject slotPrefab;
 
+    private GameObject player;
+
     private bool isOpen;
+
 
     void Update()
     {
@@ -31,6 +35,7 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
+            ItemTooltipUI.Instance.Hide();
             Time.timeScale = 1f;
             Player_controller.inputLocked = false;
         }

@@ -3,6 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Items/PowerUp")]
 public class PowerUpItem : ItemData
 {
+
+    [Header("Audio")]
+    public AudioClip speedBoostSound;
+
     [Header("PowerUp Stats")]
     public int healthRestore;
     public float speedBoost;
@@ -29,27 +33,29 @@ public class PowerUpItem : ItemData
         if (stats == null)
         {
             Debug.LogWarning("PlayerStats not found on player!");
-            isConsumed = false;
             return;
         }
 
-        Debug.Log("Used power-up: " + itemName);
 
         if (healthRestore > 0)
         {
             if (stats.IsFullHealth)
             {
-                Debug.Log("MAS FULL HP BRASKO, CO ROBIS PROSIM TA ??? ");
+                isConsumed = false;
                 return;
             }
 
             stats.Heal(healthRestore);
-            
+
         }
 
         if (speedBoost > 0 && boostDuration > 0)
+        {
             stats.BoostSpeed(speedBoost, boostDuration);
-        
+            PlaySpeedBoostSound(player, boostDuration);
+        }
+
+
         if (isHealthPowerUp && boostDuration > 0)
             stats.BoostMaxHealth(boostDuration);
 
@@ -59,5 +65,35 @@ public class PowerUpItem : ItemData
         if (isKnockbackPowerUp && boostDuration > 0)
             stats.BoostKnockback(boostDuration);
     }
+
+    private void PlaySpeedBoostSound(GameObject player, float duration)
+    {
+        if (speedBoostSound == null) return;
+
+        AudioSource source = player.GetComponent<AudioSource>();
+        if (source == null)
+            source = player.AddComponent<AudioSource>();
+
+        source.clip = speedBoostSound;
+        source.loop = true;
+        source.Play();
+
+        player.GetComponent<MonoBehaviour>()
+              .StartCoroutine(StopSoundAfterTime(source, duration));
+    }
+
+    private System.Collections.IEnumerator StopSoundAfterTime(AudioSource source, float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        if (source != null)
+        {
+            source.Stop();
+            source.loop = false;
+            source.clip = null;
+        }
+    }
+
+
 
 }

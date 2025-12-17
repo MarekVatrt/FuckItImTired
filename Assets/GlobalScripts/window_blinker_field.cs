@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class window_blinker_field : MonoBehaviour
 {
-    public SpriteRenderer renderer;
+    new public SpriteRenderer renderer;
     //farba, ktoru budeme upravovat
     public Color color; 
     //nastavime range pre variables nizsie, aby nebol neobmedzeny
