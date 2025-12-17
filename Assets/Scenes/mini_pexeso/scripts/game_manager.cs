@@ -4,6 +4,7 @@ using System.Collections;
 
 public class game_manager : MonoBehaviour
 {
+    //pexeso variables
     public bool first_card_flipped;
     public bool second_card_flipped;
     public Card_script first_card;
@@ -13,10 +14,36 @@ public class game_manager : MonoBehaviour
 
     //aby mal hrac cas si pozriet karty
     public bool is_checking = false;
-    public float match_delay = 2.5f;
+    public float match_delay = 1.5f;
+
+    //ak ma hrac pivo, da ho na pexeso a zvacsi sa mu timer
+    public bool has_beer=false;
+    public float game_timer;
 
     void Start()
     {
+        if (InventoryManager.Instance != null)
+        {
+            foreach(InventorySlot slot in InventoryManager.Instance.inventory)
+            {
+                if (slot.item.itemName == "pifko")
+                {
+                    //todo dorobit nejak interaction s jakubom
+                    game_timer=300;
+                    has_beer=true;
+                    break;
+                }
+            }
+            if (!has_beer)
+            {
+                game_timer=30;
+            }
+        }
+        else
+        {
+            game_timer=30; 
+        }
+        
         first_card_flipped=false;
         second_card_flipped=false;
         first_card=null;
@@ -83,12 +110,26 @@ public class game_manager : MonoBehaviour
 
     void Update()
     {
-        
+        game_timer-=Time.deltaTime;
+        if (game_timer <= 0)
+        {
+            lose();
+        }
     }
 
     void add_score()
     {
         score++;
         Debug.Log(score);
+    }
+
+    void lose()
+    {
+        Debug.Log("boohoo try again next time");
+    }
+
+    void win()
+    {
+        Debug.Log("we won hell ye");
     }
 }
