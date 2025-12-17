@@ -21,5 +21,17 @@ public class Scene_changer : MonoBehaviour
         {
             SceneManager.LoadScene("elevator_lobby");
         }
+
+        if (collider.CompareTag("to_floor_selector"))
+        {
+            SceneManager.LoadScene("elevator_selector");
+        }
+
+        if (collider.CompareTag("to_ground"))
+        {
+            SceneManager.LoadScene("ground_floor");
+        }
+        
+        //TODO pridat vsetky ground floor transitions
     }
 }

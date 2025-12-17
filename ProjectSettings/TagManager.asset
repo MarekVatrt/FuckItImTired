@@ -12,6 +12,12 @@ TagManager:
   - Enemy
   - weapon
   - enemy_weapon
+  - to_ground
+  - to_floor_selector
+  - to_ground_fiitfood
+  - to_groud_up
+  - to_ground_library
+  - to_ground_up
   layers:
   - Default
   - TransparentFX
