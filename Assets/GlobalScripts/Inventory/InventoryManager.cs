@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
+    public AudioSource audioSource;
 
     [Header("Inventory Settings")]
     public int maxSlots = 15;
@@ -66,7 +68,7 @@ public class InventoryManager : MonoBehaviour
             return false;
         }
 
-        Debug.Log($"Added {item.itemName} to inventory");
+        // Debug.Log($"Added {item.itemName} to inventory");
         OnInventoryChanged?.Invoke(); // notify UI
         return true;
     }
@@ -91,6 +93,7 @@ public class InventoryManager : MonoBehaviour
                     return;
             }
         }
+        OnInventoryChanged?.Invoke();
     }
 
     // ===============================
@@ -103,11 +106,28 @@ public class InventoryManager : MonoBehaviour
 
         item.Use(player);
 
+        if (!item.isConsumed)
+            return;
+
         // Consume if power-up
-        if (item.itemType == ItemType.PowerUp && item.isConsumed)
+        // Do something if quest item (kava / pifko)
+        if (item.itemType == ItemType.PowerUp ||
+            item.itemType == ItemType.Quest)
         {
             RemoveItem(item, 1);
             OnInventoryChanged?.Invoke(); // notify UI
         }
     }
+
+
+    public bool HasItem(ItemData item)
+    {
+        foreach (InventorySlot slot in inventory)
+        {
+            if (slot.item == item && slot.quantity > 0)
+                return true;
+        }
+        return false;
+    }
+
 }
