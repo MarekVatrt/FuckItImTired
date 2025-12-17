@@ -7,8 +7,14 @@ public class InventorySlotUI : MonoBehaviour
     public Image icon;
     public TextMeshProUGUI quantityText;
 
+    private InventoryUI invScript;
+
     private ItemData item;
 
+    void Start()
+    {
+        invScript=transform.parent.parent.parent.GetComponent<InventoryUI>();
+    }
     public void Setup(ItemData newItem, int newQuantity)
     {
         item = newItem;
@@ -31,5 +37,6 @@ public class InventorySlotUI : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         InventoryManager.Instance.UseItem(item, player);
+        invScript.Toggle();
     }
 }

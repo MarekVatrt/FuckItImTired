@@ -12,11 +12,12 @@ public class getters_for_hud : MonoBehaviour
 
     //skripty
     private Player_attack attack_script;
-    private take_damage_player health_script;
-    
+
     //lokalne data
     private float attack_freq;
     private GameObject last_checked_weapon_object;
+    private PlayerStats stats;
+
     //na schovanie HUD (napr v minigames)
     public bool enable_hud;
     private Canvas HUD;
@@ -48,15 +49,18 @@ public class getters_for_hud : MonoBehaviour
 
         //gettneme si skripty
         attack_script = transform.parent.GetComponentInChildren<Player_attack>();
-        health_script = transform.parent.GetComponentInChildren<take_damage_player>();
+        // health_script = transform.parent.GetComponentInChildren<take_damage_player>();
+        stats = transform.parent.GetComponentInChildren<PlayerStats>();
 
         //nastavime zakladne objekty v canvase pomocou hodnot zo skriptov
-        if (healthbar != null && health_script != null)
+        if (healthbar != null && stats != null)
         {
-            healthbar.maxValue = health_script.max_health;
+            healthbar.maxValue = stats.MaxHealth;
             healthbar.minValue = 0;
-            health_text.text = "HP: " + health_script.curr_health + "/" + health_script.max_health;
+            healthbar.value = stats.CurrentHealth;
+            health_text.text = $"HP: {stats.CurrentHealth}/{stats.MaxHealth}";
         }
+
 
         if (attack_bar != null && attack_script != null)
         {
@@ -71,15 +75,16 @@ public class getters_for_hud : MonoBehaviour
 
     void Update()
     {
+        
         HUD.enabled=enable_hud;
 
-        if (healthbar != null && health_script != null)
+        if (healthbar != null && stats != null)
         {
-            //v priprade powerupov kontrola max_health curr..
-            healthbar.maxValue = health_script.max_health; 
-            healthbar.value=health_script.curr_health;
-            health_text.text = "HP: " + health_script.curr_health + "/" + health_script.max_health;
+            healthbar.maxValue = stats.MaxHealth;
+            healthbar.value = stats.CurrentHealth;
+            health_text.text = $"HP: {stats.CurrentHealth}/{stats.MaxHealth}";
         }
+
 
         //kontrola zmeny zbrane
         if (attack_script.curr_weapon.weapon_object != last_checked_weapon_object)
@@ -94,7 +99,7 @@ public class getters_for_hud : MonoBehaviour
             attack_freq = attack_script.attack_freq;
             attack_bar.maxValue = attack_freq;
             //timer ide od attack_freq k 0, cize spravne naplnanie slideru ziskame takto
-            attack_bar.value = attack_freq-attack_script.timer; 
+            attack_bar.value = attack_freq - attack_script.timer;
 
             //ak sme pripraveny na utok, handle attack_bar nastavime na gold
             if (attack_bar.handleRect != null)
@@ -132,7 +137,7 @@ public class getters_for_hud : MonoBehaviour
         //ak nie, weapon image sprite zostane null
         else if (weapon_image != null)
         {
-            weapon_image.sprite = null; 
+            weapon_image.sprite = null;
         }
     }
 }
