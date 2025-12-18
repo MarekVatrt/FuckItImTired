@@ -69,10 +69,16 @@ public class Player_attack : MonoBehaviour
                 Attack();
             }
         }
+        //podla strany do ktorej budeme rollovat zbrane sa spusti funkcia s parametrom
         if (Input.GetKeyDown("k"))
         {
             Debug.Log("In k");
-            Equip_weapon();
+            Equip_weapon("k");
+        }
+        if (Input.GetKeyDown("j"))
+        {
+            Debug.Log("In j");
+            Equip_weapon("j");
         }
     }
 
@@ -100,25 +106,46 @@ public class Player_attack : MonoBehaviour
 
         curr_weapon.weapon_object.SetActive(true);
     }
-    void Equip_weapon()
+    void Equip_weapon(string rolling_side)
     {
         curr_weapon.weapon_object.SetActive(false);
         curr_weapon = default;
 
-        weapon_index++;
-        if (weapon_index >= weapons.Length)
+        if (rolling_side == "k")
         {
-            weapon_index = 0;
-        }
-        while (weapons[weapon_index].is_acq != true)
-        {
-            Debug.Log("In while");
             weapon_index++;
             if (weapon_index >= weapons.Length)
             {
                 weapon_index = 0;
             }
+            while (weapons[weapon_index].is_acq != true)
+            {
+                Debug.Log("In while");
+                weapon_index++;
+                if (weapon_index >= weapons.Length)
+                {
+                    weapon_index = 0;
+                }
+            }
         }
+        if (rolling_side == "j")
+        {
+            weapon_index--;
+            if (weapon_index < 0)
+            {
+                weapon_index = weapons.Length-1;
+            }
+            while (weapons[weapon_index].is_acq != true)
+            {
+                Debug.Log("In while");
+                weapon_index--;
+                if (weapon_index < 0)
+                {
+                    weapon_index = weapons.Length-1;
+                }
+            }
+        }
+        
 
         Debug.Log("on weapon index: " + weapon_index);
         curr_weapon = weapons[weapon_index];
