@@ -3,6 +3,7 @@ using UnityEngine;
 public class progress_bar : MonoBehaviour
 {
     [SerializeField] private GameObject bar;
+    [SerializeField] private MinigameController minigameController;
     private float progress=50;
     public double curr_scale=0.5;
     public float max_progress=100;
@@ -22,7 +23,7 @@ public class progress_bar : MonoBehaviour
             progress=max_progress;
             Debug.Log("u win bro");
             // Ked minihru vyhra je zavolana funkcia ktora zmeni scenu a quest state
-            FindFirstObjectByType<MinigameManager>().CompleteMinigame();
+            minigameController.Win();
 
         }
         curr_scale=progress/max_progress;
@@ -37,7 +38,8 @@ public class progress_bar : MonoBehaviour
             progress=min_progress;
             Debug.Log("u done bro");
             // Ked minihru prehra je zavolana funkcia ktora zmeni scenu a quest state
-            FindFirstObjectByType<MinigameManager>().CompleteMinigame();
+            minigameController.Lose();
+            return;
         }
         if (progress > 0)
         {

@@ -5,6 +5,7 @@ public class Player_attack : MonoBehaviour
 {
     //potrebujem script aby som zistil na ktoru stranu bol hrac naposledy otoceny
     //do tej strany zautoci
+    public static Player_attack Instance;
     Player_controller player_controller_script;
     //budeme flipovat weapons object
     GameObject weapon_holder;
@@ -27,6 +28,14 @@ public class Player_attack : MonoBehaviour
     public float attack_freq;
     public float timer;
     private int attack_orientation;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {

@@ -3,21 +3,22 @@ using System.Collections;
 
 
 public class NPC_QuestGiver : Interactable
-{
+{   
+    // quest step v ktorom sa zapne konkretny dialog
+    [SerializeField] private QuestStep questStepNeeded;
     public Dialogue dialogue;
 
-    private bool questStarted = false;
 
     public override void Interact()
     {
-        if (!questStarted)
+        if (QuestManager.Instance.IsAtStep(questStepNeeded))
         {
             DialogueManager.Instance.StartDialogue(dialogue);
             StartCoroutine(WaitForDialogueAndStartQuest());
         }
         else
         {
-            Debug.Log("Quest already started.");
+            Debug.Log("Default NPC dialog ked neni zapnuty konkretny quest");
         }
     }
 
@@ -28,8 +29,9 @@ public class NPC_QuestGiver : Interactable
             yield return null;
 
         // Start quest
-        QuestManager.Instance.StartQuest();
-        questStarted = true;
-        Debug.Log("Quest has begun!");
+        // QuestManager.Instance.StartQuest();
+        QuestManager.Instance.AdvanceToNextStep();
+        // questStarted = true;
+        // Debug.Log("Quest has begun!");
     }
 }
