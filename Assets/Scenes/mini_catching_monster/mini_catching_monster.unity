@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::progress_bar
   bar: {fileID: 810478089}
+  minigameController: {fileID: 1058103201}
   curr_scale: 0.3
   max_progress: 100
   min_progress: 0
@@ -1687,7 +1688,7 @@ GameObject:
   - component: {fileID: 1058103200}
   - component: {fileID: 1058103201}
   m_Layer: 0
-  m_Name: MinigameManager
+  m_Name: MinigameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1720,7 +1721,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9d46d563cbb2e44965b46645c084d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
-  mainSceneName: ground_floor
+  winStep: 0
+  loseStep: 0
+  branchOnWin: 0
+  rewardGiver: {fileID: 0}
+  returnSceneName: ground_floor
 --- !u!1 &1123055744
 GameObject:
   m_ObjectHideFlags: 0

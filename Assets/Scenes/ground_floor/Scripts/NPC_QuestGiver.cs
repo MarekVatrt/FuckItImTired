@@ -28,7 +28,7 @@ public class NPC_QuestGiver : Interactable
             yield return null;
 
         // Start quest
-        QuestManager.Instance.StartQuest();
+        // QuestManager.Instance.StartQuest();
         questStarted = true;
         Debug.Log("Quest has begun!");
     }
