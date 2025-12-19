@@ -17,7 +17,12 @@ MonoBehaviour:
   icon: {fileID: -7512326813324254173, guid: c397b3aba29d3634b802011594921d5b, type: 3}
   stackable: 1
   maxStack: 10
+  isConsumed: 1
   itemType: 1
+  speedBoostSound: {fileID: 8300000, guid: 3cb4a5b1422e9bd4dbddd6783a334df6, type: 3}
   healthRestore: 0
   speedBoost: 5
   boostDuration: 10
+  isHealthPowerUp: 0
+  isDamagePowerUp: 0
+  isKnockbackPowerUp: 0

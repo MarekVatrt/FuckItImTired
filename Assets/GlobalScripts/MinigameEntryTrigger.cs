@@ -3,24 +3,54 @@ using UnityEngine.SceneManagement;
 
 public class MinigameEntryTrigger : MonoBehaviour
 {
-    public string minigameSceneName = "mini_catching_monster";
+    [Header("Minigame")]
+    [SerializeField] private string minigameSceneName;
+
+    [Header("Quest")]
+    [SerializeField] private QuestStep requiredQuestStep;
+
+    private GameObject player;
+
+    private bool playerInside;
+
+    void Update()
+    {
+        if (playerInside && Input.GetKeyDown(KeyCode.E))
+        {
+            TryEnterMinigame();
+        }
+    }
+
+    private void TryEnterMinigame()
+    {
+        if (QuestManager.Instance.CurrentStep != requiredQuestStep)
+        {
+            Debug.Log("Minigame not available yet.");
+            return;
+        }
+        // Deaktivuj hraca lebo nema byt v minihre
+        QuestManager.Instance.SetPlayerActive(false);
+
+        QuestManager.Instance.MarkMinigameStarted();
+        SceneManager.LoadScene(minigameSceneName);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the player enters
         if (other.CompareTag("Player"))
         {
-            // Only trigger if the quest state is correct
-            if (QuestManager.Instance.CurrentState == QuestManager.QuestState.StartedAfterNPC)
-            {
-                Debug.Log("Entering minigame...");
+            playerInside = true;
+            player = other.gameObject;
 
-                // Update quest state
-                QuestManager.Instance.MinigameStarted();
+        }
+    }
 
-                // Load minigame scene (replace current scene)
-                SceneManager.LoadScene(minigameSceneName);
-            }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInside = false;
+            player = null;
         }
     }
 }

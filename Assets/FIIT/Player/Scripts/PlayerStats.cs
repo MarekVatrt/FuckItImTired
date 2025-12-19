@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
+    public static PlayerStats Instance;
+
     [Header("Movement")]
     [SerializeField] private float baseMoveSpeed = 5.5f;
     public float CurrentMoveSpeed { get; private set; }
@@ -39,6 +41,16 @@ public class PlayerStats : MonoBehaviour
         CurrentMoveSpeed = baseMoveSpeed;
         currentDamageMultiplier = baseDamageMultiplier;
         currentKnockbackMultiplier = baseKnockbackMultiplier;
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
     }
 
