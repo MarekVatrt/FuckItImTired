@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Enemy_ai : MonoBehaviour
 {
+    [SerializeField] Animator animator;
+    new SpriteRenderer renderer;
+
     //weapon
     GameObject weapon_holder;
     //enemy variables
@@ -32,6 +35,7 @@ public class Enemy_ai : MonoBehaviour
         player=null;
         is_knocked_back=false;
         
+        renderer=GetComponentInParent<SpriteRenderer>();
         vision_field = GetComponent<CircleCollider2D>();
         vision_field.radius = detection_distance;
         body=transform.root.GetComponent<Rigidbody2D>();
@@ -59,10 +63,26 @@ public class Enemy_ai : MonoBehaviour
                 Vector2 direction = ((Vector2)player.position - body.position).normalized;
                 get_dominant_direction(direction);
                 body.linearVelocity = direction * walk_speed;
+                //nastavime animaciu podla vacsieho smeru po x-ovej osi
+                if (direction.x > 0)
+                {
+                    animator.SetBool("is_walking",true);
+                    renderer.flipX=true;
+                }
+                else if (direction.x < 0)
+                {
+                    animator.SetBool("is_walking",true);
+                    renderer.flipX=false;
+                }
+                else
+                {
+                    animator.SetBool("is_walking",false);
+                }
             }
             else
             {
                 body.linearVelocity = Vector2.zero;
+                animator.SetBool("is_walking",false);
             }
         }
         //ak je player v poli utoku a enemy este neutoci, nech zautoci
