@@ -3,13 +3,24 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
+    private GameObject player;
 
     [Header("Quest State")]
     public QuestStep CurrentStep = QuestStep.WakeUp;
     public QuestBranch ChosenBranch = QuestBranch.None;
 
+
+    [Header("Player Prefab")]
+    [SerializeField] private GameObject playerPrefab;
+
+    [Header("Default Spawn Point")]
+    [SerializeField] private Transform defaultSpawnPoint;
+
     private void Awake()
     {
+        Vector3 spawnPosition = defaultSpawnPoint.position;
+        player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
+
         if (Instance == null)
         {
             Instance = this;
@@ -66,5 +77,11 @@ public class QuestManager : MonoBehaviour
     public bool HasChosenBranch()
     {
         return ChosenBranch != QuestBranch.None;
+    }
+
+    public void SetPlayerActive(bool value)
+    {
+        if (player != null)
+            player.SetActive(value);
     }
 }

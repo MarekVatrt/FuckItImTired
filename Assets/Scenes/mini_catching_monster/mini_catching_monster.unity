@@ -546,6 +546,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2030275374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &328911164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328911166}
+  - component: {fileID: 328911167}
+  m_Layer: 0
+  m_Name: RewardGiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &328911166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328911164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9538, y: 1.89801, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &328911167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328911164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047a5058b7cd53a4cab1e0f21db6f11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardGiver
+  rewards:
+  - item: {fileID: 0}
+    weaponIndex: 1
 --- !u!1 &350542074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1771,7 @@ MonoBehaviour:
   winStep: 0
   loseStep: 0
   branchOnWin: 0
-  rewardGiver: {fileID: 0}
+  rewardGiver: {fileID: 328911167}
   returnSceneName: ground_floor
 --- !u!1 &1123055744
 GameObject:
@@ -4574,3 +4621,4 @@ SceneRoots:
   - {fileID: 1755950099}
   - {fileID: 207801852}
   - {fileID: 1058103200}
+  - {fileID: 328911166}

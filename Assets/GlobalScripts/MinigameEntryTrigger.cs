@@ -29,7 +29,7 @@ public class MinigameEntryTrigger : MonoBehaviour
             return;
         }
         // Deaktivuj hraca lebo nema byt v minihre
-        // player.SetActive(false);
+        QuestManager.Instance.SetPlayerActive(false);
 
         QuestManager.Instance.MarkMinigameStarted();
         SceneManager.LoadScene(minigameSceneName);

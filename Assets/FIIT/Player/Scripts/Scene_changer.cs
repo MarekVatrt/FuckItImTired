@@ -17,9 +17,13 @@ public class Scene_changer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        
+        // MinigameReturnData.ReturnPosition = Vector3.zero;
+        // MinigameReturnData.ReturnScene = "kokotko";
         if (collider.CompareTag("to_elevator"))
         {
             SceneManager.LoadScene("elevator_lobby");
+            transform.position = new Vector3(0,0,0);
         }
 
         if (collider.CompareTag("to_floor_selector"))

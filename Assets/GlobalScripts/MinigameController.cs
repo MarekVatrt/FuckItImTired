@@ -17,31 +17,34 @@ public class MinigameController : MonoBehaviour
     public void Win()
     {
         Debug.Log("[MINIGAME] Player won!");
-        MinigameReturnData.WasWin = true;
+        rewardGiver.GiveRewards();
+        // MinigameReturnData.WasWin = true;
 
-        // Store current scene info if needed (optional)
-        MinigameReturnData.ReturnScene = returnSceneName;
-        MinigameReturnData.ReturnPosition = GetReturnPosition(); // spawn at door/player exit
+        // // Store current scene info if needed (optional)
+        // MinigameReturnData.ReturnScene = returnSceneName;
+        // MinigameReturnData.ReturnPosition = GetReturnPosition(); // spawn at door/player exit
 
         // Update quest
         QuestManager.Instance.AdvanceToNextStep();
+        QuestManager.Instance.SetPlayerActive(true);
 
         // Load previous scene
-        SceneManager.LoadScene(MinigameReturnData.ReturnScene);
+        SceneManager.LoadScene(returnSceneName);
     }
 
     public void Lose()
     {
         Debug.Log("[MINIGAME] Player lost!");
-        MinigameReturnData.WasWin = false;
+        // MinigameReturnData.WasWin = false;
 
-        MinigameReturnData.ReturnScene = returnSceneName;
-        MinigameReturnData.ReturnPosition = GetReturnPosition();
+        // MinigameReturnData.ReturnScene = returnSceneName;
+        // MinigameReturnData.ReturnPosition = GetReturnPosition();
 
         // Update quest if needed (different path)
         QuestManager.Instance.AdvanceToFailStep();
-        
-        SceneManager.LoadScene(MinigameReturnData.ReturnScene);
+        QuestManager.Instance.SetPlayerActive(true);
+
+        SceneManager.LoadScene(returnSceneName);
     }
 
     private Vector3 GetReturnPosition()
