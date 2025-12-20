@@ -211,6 +211,317 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1551037658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &247983893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 413416499896574956, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 413416499896574956, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 674897604670363701, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "Sk\xE1\u010D stl\xE1\u010Dan\xEDm tla\u010Didla <b=>Spacebar</b> pomedzi
+        <color=#FFD700>k\u013E\xFA\u010De</color>, ktor\xE9 na teba bud\xFA prilieta\u0165
+        zprava.\nNa z\xEDskanie k\u013E\xFA\u010Da by malo sta\u010Di\u0165 presko\u010Di\u0165
+        <color=green>20</color> imagin\xE1rnych k\u013E\xFA\u010Dov, ale d\xE1vaj
+        pozor, po\u010Dul som, \u017Ee \u010Dlovek si dok\xE1\u017Ee predstavi\u0165
+        perfektne iba <color=red>6</color> p\xE1rov k\u013E\xFA\u010Dov, neru\u010D\xEDm
+        za teba ak toto \u010D\xEDslo prekro\u010D\xED\u0161."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650188788957135050, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>Palo</u>\nOvl\xE1danie:\n<color=green>spacebar</color> = skok"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303192916029186569, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 259.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303192916029186569, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263447883291217188, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "Od slobody \u0165a del\xED posledn\xE1 prek\xE1\u017Eka ! Prepl\xED\u017E
+        sa cez \u0161tudijn\xE9 oddelenie \u0161koly, popri \u010Domu sa vyh\xFDbaj
+        gigantick\xFDm k\u013E\xFA\u010Dom skazy, ktor\xE9 s\xFA v\xFDtvory tvojej
+        fant\xE1zie. Ktovie, \u010Di sa ti vlastne skuto\u010Dne podarilo \xFAjs\u0165,
+        alebo sa ti v\u0161etko len sn\xEDva na predn\xE1\u0161ke v aule.. hm.. ANYWAYS
+        ! Ve\u013Ea \u0161\u0165asia !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344860678389764189, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344860678389764189, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -442.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500742228520385315, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>imagin\xE1rne k\u013E\xFA\u010De</u>\ndotknutie = <color=red>koniec</color>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386731350017174013, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386731350017174013, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386731350017174013, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454316463280708443, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454316463280708443, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583460996011354372, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1956711591146775330, guid: aa5ed2d6fe09fab4f9ab8d47de341444,
+        type: 3}
+    - target: {fileID: 6677864843293380824, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9004364406126183276, guid: a4276db86ac5fa34eb9ad7dddf4f13de,
+        type: 3}
+    - target: {fileID: 6970574336217103829, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Name
+      value: Minigame_introduction
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700043139858425190, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 270.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700043139858425190, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361579681546171352, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: '<u>hranice minihry</u>
+
+        dotknutie = <color=red>koniec</color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671948199736549871, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1619689830170447511, guid: a4276db86ac5fa34eb9ad7dddf4f13de,
+        type: 3}
+    - target: {fileID: 9208167178240295494, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "Z\xEDskaj k\u013E\xFA\u010D !"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 1709614767246168523, guid: c38bc12759d6d2440b59e7cd90931e92, type: 3}
+    - {fileID: 1275961487686378946, guid: c38bc12759d6d2440b59e7cd90931e92, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c38bc12759d6d2440b59e7cd90931e92, type: 3}
 --- !u!1 &317185571
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +924,7 @@ Transform:
   m_GameObject: {fileID: 756744204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.83, y: -1.56, z: 0}
+  m_LocalPosition: {x: 14.07, y: -1.56, z: 0}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4485,3 +4796,4 @@ SceneRoots:
   - {fileID: 524913102}
   - {fileID: 461842126}
   - {fileID: 1109908456}
+  - {fileID: 247983893}

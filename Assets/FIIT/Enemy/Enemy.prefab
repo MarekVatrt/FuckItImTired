@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 4481660926489131212}
   - component: {fileID: 2054162829945880550}
   - component: {fileID: 5854837721358410286}
+  - component: {fileID: 3215870467138591065}
   m_Layer: 23
   m_Name: vision_field
   m_TagString: Untagged
@@ -472,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9428ad4e54e00f643a74ae0fe8bbfaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_ai
+  animator: {fileID: 8041609334226627505}
   damage: 25
   knockback: 5
   settable_walk_speed: 3
@@ -479,6 +481,28 @@ MonoBehaviour:
   attack_direction: 0
   is_knocked_back: 0
   detection_distance: 10
+--- !u!95 &3215870467138591065
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645004869335078199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec13f071f82fe0b4fb27cc3e1a6aa4aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4968578941639989606
 GameObject:
   m_ObjectHideFlags: 0

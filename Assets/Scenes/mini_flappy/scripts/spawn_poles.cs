@@ -34,7 +34,7 @@ public class spawn_poles : MonoBehaviour
     {
         //spawn height randomizer
         float spawn_height = Random.Range(-0.4f, 1);
-        float random_rotation =  Random.Range(-20f,20f); 
+        float random_rotation =  Random.Range(-35f,35f); 
         //zmenime random_rotation na quaternion, aby sme to mohli pouzit v Instantiate
         Quaternion spawn_rotation = Quaternion.Euler(0, 0, 0);
 
