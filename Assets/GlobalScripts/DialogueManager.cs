@@ -5,12 +5,20 @@ using System.Collections;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
+    
+
 
     [Header("UI References")]
     public GameObject dialoguePanel;
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public TMP_Text continueText;
+
+    public GameObject CharacterAvatar;
+
+    private UnityEngine.UI.Image NPCImage;
+    
+    
 
     private Dialogue currentDialogue;
     private int sentenceIndex;
@@ -19,6 +27,8 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         dialoguePanel.SetActive(false);
+        NPCImage = CharacterAvatar.GetComponent<UnityEngine.UI.Image>();
+        CharacterAvatar.SetActive(false);
         if (Instance == null)
             Instance = this;
         else
@@ -30,7 +40,12 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogue;
         sentenceIndex = 0;
 
+        
+        NPCImage.sprite = dialogue.NPCSprite;
+        NPCImage.preserveAspect = true;
+
         dialoguePanel.SetActive(true);
+        CharacterAvatar.SetActive(true);
         continueText.gameObject.SetActive(false);
 
         nameText.text = currentDialogue.speakerName;
@@ -75,6 +90,8 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
+        CharacterAvatar.SetActive(false);
+        Player_controller.inputLocked = false;
     }
 
     public bool DialogueActive()

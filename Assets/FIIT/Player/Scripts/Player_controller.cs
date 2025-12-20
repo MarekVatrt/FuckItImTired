@@ -58,6 +58,7 @@ public class Player_controller : MonoBehaviour
 
         // Ak je hra pauznuta tak sa skipne cely update
         // znemoznime hracovi sa hybat
+        
         if (inputLocked)
             return;
 

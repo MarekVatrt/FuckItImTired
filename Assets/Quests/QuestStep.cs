@@ -1,17 +1,25 @@
 public enum QuestStep
 {
-    WakeUp,
-    GoToPointA,
-    MinigameA,
-    GoToPointB,
+    Zobudenie,
+    ChodNaPrednasku,
+    SkonceneChytanieMonsterov,
+    OdidZoSkoly,
 
     // Branch
-    MinigameC,
-    MinigameD,
+        // Jozef branch
+    IdemeZaJozefom,
+    ChodSpravitKavu,
+    OdnesKavuJozefovi,
+
+        // Studijne branch
+    IdemeZaStudijne,
+    ChodUpratat,
+    UpratalSiChodSpatNaStudijne,
 
     // Merge
-    GoToPointE,
+    ChodZaKubom,
+    VyhratePexeso,
+    PrehratePexeso,
 
-    FinalSequence,
     Completed
 }

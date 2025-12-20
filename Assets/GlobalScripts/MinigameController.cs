@@ -6,7 +6,7 @@ public class MinigameController : MonoBehaviour
     [Header("Quest")]
     [SerializeField] private QuestStep winStep;
     [SerializeField] private QuestStep loseStep;
-    [SerializeField] private QuestBranch branchOnWin = QuestBranch.None;
+    // [SerializeField] private QuestBranch branchOnWin = QuestBranch.None;
 
     [Header("Rewards (Win Only)")]
     [SerializeField] private RewardGiver rewardGiver;
@@ -26,10 +26,10 @@ public class MinigameController : MonoBehaviour
 
         // Update quest
         QuestManager.Instance.AdvanceToNextStep();
-        QuestManager.Instance.SetPlayerActive(true);
 
         // Load previous scene
         SceneManager.LoadScene(returnSceneName);
+        QuestManager.Instance.SetPlayerActive(true);
     }
 
     public void Lose()
@@ -41,17 +41,9 @@ public class MinigameController : MonoBehaviour
         // MinigameReturnData.ReturnPosition = GetReturnPosition();
 
         // Update quest if needed (different path)
-        QuestManager.Instance.AdvanceToFailStep();
-        QuestManager.Instance.SetPlayerActive(true);
+        QuestManager.Instance.AdvanceToNextStep();
 
         SceneManager.LoadScene(returnSceneName);
-    }
-
-    private Vector3 GetReturnPosition()
-    {
-        // Example: get spawn point near the door player entered from
-        // Could be a serialized Transform on the minigame scene
-        // For now just Vector3.zero
-        return Vector3.zero;
+        QuestManager.Instance.SetPlayerActive(true);
     }
 }

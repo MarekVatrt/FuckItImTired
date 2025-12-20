@@ -6,7 +6,7 @@ public class QuestManager : MonoBehaviour
     private GameObject player;
 
     [Header("Quest State")]
-    public QuestStep CurrentStep = QuestStep.WakeUp;
+    public QuestStep CurrentStep = QuestStep.Zobudenie;
     public QuestBranch ChosenBranch = QuestBranch.None;
 
 

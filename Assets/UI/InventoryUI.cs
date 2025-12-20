@@ -7,7 +7,6 @@ public class InventoryUI : MonoBehaviour
     public Transform gridParent;
     public GameObject slotPrefab;
 
-    private GameObject player;
 
     private bool isOpen;
 

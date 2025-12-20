@@ -50,7 +50,7 @@ public class getters_for_hud : MonoBehaviour
         //gettneme si skripty
         attack_script = transform.parent.GetComponentInChildren<Player_attack>();
         // health_script = transform.parent.GetComponentInChildren<take_damage_player>();
-        stats = transform.parent.GetComponentInChildren<PlayerStats>();
+        stats = PlayerStats.Instance;
 
         //nastavime zakladne objekty v canvase pomocou hodnot zo skriptov
         if (healthbar != null && stats != null)
@@ -76,7 +76,7 @@ public class getters_for_hud : MonoBehaviour
     void Update()
     {
         
-        HUD.enabled=enable_hud;
+        HUD.enabled=DialogueManager.Instance != null && !DialogueManager.Instance.DialogueActive();
 
         if (healthbar != null && stats != null)
         {

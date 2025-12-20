@@ -2,18 +2,24 @@ using UnityEngine;
 using System.Collections;
 
 
-public class NPC_QuestGiver : Interactable
-{   
+public class DialogueGiver : MonoBehaviour
+{
     // quest step v ktorom sa zapne konkretny dialog
     [SerializeField] private QuestStep questStepNeeded;
     public Dialogue dialogue;
+    public bool lockPlayer;
 
+    public bool isTriggeredByPlayer = false;
 
-    public override void Interact()
+    public void Interact()
     {
         if (QuestManager.Instance.IsAtStep(questStepNeeded))
         {
+            Debug.Log("SOM V SPRAVNOM STEPE, UKAZUJEM DIALOG");
+
             DialogueManager.Instance.StartDialogue(dialogue);
+            if (lockPlayer)
+                Player_controller.inputLocked = true;
             StartCoroutine(WaitForDialogueAndStartQuest());
         }
         else
@@ -30,7 +36,13 @@ public class NPC_QuestGiver : Interactable
 
         // Start quest
         // QuestManager.Instance.StartQuest();
-        QuestManager.Instance.AdvanceToNextStep();
+        Debug.Log("SKONCIL DIALOGUE");
+        // IBA AK HRAC INTERAGOVAL S DIALOGOM (stlacil E) CHOD NA DALSI QUEST STEP
+        if (isTriggeredByPlayer)
+        {
+            QuestManager.Instance.AdvanceToNextStep();
+            Debug.Log("IDE SA NA DALSI QUEST STEP");
+        }
         // questStarted = true;
         // Debug.Log("Quest has begun!");
     }
