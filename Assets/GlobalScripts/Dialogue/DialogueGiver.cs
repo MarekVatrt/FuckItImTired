@@ -38,11 +38,11 @@ public class DialogueGiver : MonoBehaviour
         // QuestManager.Instance.StartQuest();
         Debug.Log("SKONCIL DIALOGUE");
         // IBA AK HRAC INTERAGOVAL S DIALOGOM (stlacil E) CHOD NA DALSI QUEST STEP
-        if (isTriggeredByPlayer)
-        {
-            QuestManager.Instance.AdvanceToNextStep();
-            Debug.Log("IDE SA NA DALSI QUEST STEP");
-        }
+        // if (isTriggeredByPlayer)
+        // {
+        //     QuestManager.Instance.AdvanceToNextStep();
+        //     Debug.Log("IDE SA NA DALSI QUEST STEP");
+        // }
         // questStarted = true;
         // Debug.Log("Quest has begun!");
     }

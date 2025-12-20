@@ -62,11 +62,11 @@ public class QuestManager : MonoBehaviour
         Debug.Log("Quest advanced to step " + CurrentStep);
     }
 
-    public void AdvanceToFailStep()
-    {
-        CurrentStep++; // or different logic
-        Debug.Log("Quest failed path, step " + CurrentStep);
-    }
+    // public void AdvanceToFailStep()
+    // {
+    //     CurrentStep++;
+    //     Debug.Log("Quest failed path, step " + CurrentStep);
+    // }
     // --- HELPERS ---
 
     public bool IsAtStep(QuestStep step)

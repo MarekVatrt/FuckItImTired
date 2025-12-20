@@ -1,6 +1,6 @@
 public enum QuestBranch
 {
     None,
-    C,
-    D
+    IdemeZaJozefom,
+    IdemeNaStudijne,
 }
