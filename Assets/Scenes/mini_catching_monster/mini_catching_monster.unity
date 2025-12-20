@@ -2999,6 +2999,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1650188788957135050, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>energy drink</u>\n<color=green>+7</color> sk\xF3re"
+      objectReference: {fileID: 0}
     - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3099,10 +3104,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3500742228520385315, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>ko\u0161\xEDk</u>\nOvl\xE1danie:\n< / > alebo A / D"
+      objectReference: {fileID: 0}
     - target: {fileID: 6970574336217103829, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_Name
       value: Minigame_introduction
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361579681546171352, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>test, vank\xFA\u0161 a kalkula\u010Dka</u>\n<color=red>-10</color>
+        sk\xF3re"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

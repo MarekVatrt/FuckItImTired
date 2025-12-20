@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time left:'
+  m_text: "\u010Cas:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ba62de1edc167943a27e3bc51828adc, type: 2}
   m_sharedMaterial: {fileID: -6098706170142012841, guid: 9ba62de1edc167943a27e3bc51828adc,
@@ -940,7 +940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your score:'
+  m_text: "Tvoje sk\xF3re:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ba62de1edc167943a27e3bc51828adc, type: 2}
   m_sharedMaterial: {fileID: -6098706170142012841, guid: 9ba62de1edc167943a27e3bc51828adc,
@@ -1144,6 +1144,322 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 483888804}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &533949940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 108932748346137622, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1852579764205030377, guid: 0c53d35fc8944aa468d51eda9e2909fb,
+        type: 3}
+    - target: {fileID: 413416499896574956, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 413416499896574956, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 674897604670363701, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "Vyhraj hru pexesa v danom \u010Dasovom limite - klikni my\u0161ou na
+        2 karti\u010Dky, ktor\xE9 chce\u0161 oto\u010Di\u0165. Po oto\u010Den\xED
+        karti\u010Diek sa skontro\u013Euje, \u010Di s\xFA p\xE1r. Ak \xE1no, pripo\u010D\xEDta
+        sa ti sk\xF3re a karti\u010Dky bud\xFA vybaven\xE9, ak nie, karti\u010Dky
+        sa obr\xE1tia nasp\xE4\u0165. Tvoje sk\xF3re je na\u013Eavo, \u010Dasov\xFD
+        limit je napravo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296671883347409926, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650188788957135050, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>neobr\xE1ten\xE1 karta</u>\nklikni pre <color=green>obr\xE1tenie</color>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821839324634663429, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821839324634663429, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821839324634663429, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821839324634663429, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821839324634663429, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303192916029186569, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 342.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263447883291217188, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "Dostal si sa k Bokuovi, ktor\xFD hovor\xED, \u017Ee ti pom\xF4\u017Ee.
+        Av\u0161ak, dnes je ve\u010Der spolo\u010Densk\xFDch hier a Boku je vo funky
+        n\xE1lade. A tak v duchu ve\u010Dera ti pom\xF4\u017Ee iba ak ho poraz\xED\u0161
+        v pexese !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344860678389764189, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344860678389764189, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -442.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384577955919218882, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1852579764205030377, guid: 0c53d35fc8944aa468d51eda9e2909fb,
+        type: 3}
+    - target: {fileID: 3500742228520385315, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>vybaven\xE1 \nkarta</u>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454316463280708443, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -940
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454316463280708443, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583460996011354372, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 154a2ddbde270004798db0a1ca5708df,
+        type: 3}
+    - target: {fileID: 6970574336217103829, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Name
+      value: Minigame_introduction
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086679076372347801, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086679076372347801, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086679076372347801, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086679076372347801, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086679076372347801, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700043139858425190, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361579681546171352, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: "<u>p\xE1r kariet</u>\n<color=green>+1</color> sk\xF3re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671948199736549871, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6889991596347035760, guid: 89efe20d926dc9441b15fb9b0a204617,
+        type: 3}
+    - target: {fileID: 9208167178240295494, guid: c38bc12759d6d2440b59e7cd90931e92,
+        type: 3}
+      propertyPath: m_text
+      value: Vyhraj pexeso !
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6405540468598683325, guid: c38bc12759d6d2440b59e7cd90931e92, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c38bc12759d6d2440b59e7cd90931e92, type: 3}
 --- !u!1001 &667688119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4215,3 +4531,4 @@ SceneRoots:
   - {fileID: 1834770622}
   - {fileID: 211372226}
   - {fileID: 1889546111}
+  - {fileID: 533949940}

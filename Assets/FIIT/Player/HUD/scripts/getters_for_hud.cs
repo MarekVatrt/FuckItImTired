@@ -22,11 +22,17 @@ public class getters_for_hud : MonoBehaviour
     public bool enable_hud;
     private Canvas HUD;
 
+    public static getters_for_hud Instance;
+
     //povodne bez vsetkych check-ov, potom som ich pridal vsade, lebo neustale hadzalo NullExepti..
     //pravdepodobne kvoli nacasovaniu vzniku weapon objektov a vzniku tohto scriptu zaroven
     //weapons sa nestihnu inicializovat skor ako sa spusti tento skript
     void Start()
     {
+        if (Instance == null)
+        {
+            Instance=this;
+        }
 
         HUD=GetComponent<Canvas>();
         //ak chceme skryt HUD

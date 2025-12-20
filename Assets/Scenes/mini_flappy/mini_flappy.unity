@@ -283,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 1650188788957135050, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_text
-      value: "Pa\u013Eo\nOvl\xE1danie:\n<color=green>spacebar</color> = skok"
+      value: "<u>Palo</u>\nOvl\xE1danie:\n<color=green>spacebar</color> = skok"
       objectReference: {fileID: 0}
     - target: {fileID: 2303192916029186569, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
@@ -293,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 2303192916029186569, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -140
       objectReference: {fileID: 0}
     - target: {fileID: 2768569806859361544, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
@@ -443,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 3500742228520385315, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_text
-      value: "imagin\xE1rne k\u013E\xFA\u010De\ndotknutie = <color=red>koniec</color>"
+      value: "<u>imagin\xE1rne k\u013E\xFA\u010De</u>\ndotknutie = <color=red>koniec</color>"
       objectReference: {fileID: 0}
     - target: {fileID: 6386731350017174013, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
@@ -500,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 8361579681546171352, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_text
-      value: 'hranice minihry
+      value: '<u>hranice minihry</u>
 
         dotknutie = <color=red>koniec</color>'
       objectReference: {fileID: 0}
