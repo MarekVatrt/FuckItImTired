@@ -40,6 +40,7 @@ public class take_damage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("POMOOOOC");
         if (other.CompareTag("weapon"))
         {
             Player_attack weapons_script = other.transform.root.GetComponent<Player_attack>();
@@ -49,7 +50,6 @@ public class take_damage : MonoBehaviour
 
             // knockback_taken=weapons_script.curr_weapon.knockback;
             knockback_taken = weapons_script.GetCurrentKnockback();
-            Debug.Log("POMOOOOC");
             take_attack();
         }
     }

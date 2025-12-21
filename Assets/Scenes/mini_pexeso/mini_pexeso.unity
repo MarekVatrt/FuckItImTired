@@ -4430,7 +4430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24b3f3bedc25294a93e4e18d98a2f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::game_manager
-  minigameController: {fileID: 0}
+  minigameController: {fileID: 867649872}
   first_card_flipped: 0
   second_card_flipped: 0
   first_card: {fileID: 0}
