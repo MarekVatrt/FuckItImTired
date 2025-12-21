@@ -20,8 +20,15 @@ public class QuestItem : ItemData
         if (isBeer && boostDuration > 0)
         {
             stats.DrunkDebuff(boostDuration);
+            isConsumed = true;
         }
         else
-            isConsumed = false; // Kava aby sa nekonzumla
+        {
+            PlayerStats.Instance.BoostSpeed(4.5f, 5f);
+            PlayerStats.Instance.BoostDamage(5f);
+            PlayerStats.Instance.BoostMaxHealth(5f);
+
+            isConsumed = true; // Kava sa da tiez konzumovat
+        }
     }
 }

@@ -6,7 +6,6 @@ using System.Collections;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
-    public AudioSource audioSource;
 
     [Header("Inventory Settings")]
     public int maxSlots = 15;
@@ -15,6 +14,11 @@ public class InventoryManager : MonoBehaviour
     public List<InventorySlot> inventory = new List<InventorySlot>();
     // event pre callnutie UI refreshu
     public event Action OnInventoryChanged;
+    public event Action<ItemData, int> OnItemAdded;
+    public event Action<ItemData, int> OnItemRemoved;
+
+    public static event Action OnInventoryManagerReady;
+
 
     private void Awake()
     {
@@ -22,6 +26,9 @@ public class InventoryManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Notify anyone waiting
+            OnInventoryManagerReady?.Invoke();
         }
         else
         {
@@ -29,12 +36,11 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // ===============================
-    // ADD ITEM
-    // ===============================
     public bool AddItem(ItemData item, int amount = 1)
     {
-        // Try stacking first
+        int originalAmount = amount;
+
+        // stacking logic...
         if (item.stackable)
         {
             foreach (InventorySlot slot in inventory)
@@ -46,14 +52,11 @@ public class InventoryManager : MonoBehaviour
 
                     slot.quantity += toAdd;
                     amount -= toAdd;
-
-                    if (amount <= 0)
-                        return true;
                 }
             }
         }
 
-        // Add new slots if space available
+        // este potrebne pridat item
         while (amount > 0 && inventory.Count < maxSlots)
         {
             int toAdd = item.stackable ? Mathf.Min(item.maxStack, amount) : 1;
@@ -61,21 +64,19 @@ public class InventoryManager : MonoBehaviour
             amount -= toAdd;
         }
 
-        // If amount > 0, inventory is full
+        // naplnili sme inventar, je plnka a stale mame co pridavat
         if (amount > 0)
-        {
-            Debug.Log("Inventory full!");
             return false;
-        }
 
-        // Debug.Log($"Added {item.itemName} to inventory");
-        OnInventoryChanged?.Invoke(); // notify UI
+        int addedAmount = originalAmount - amount;
+
+        OnItemAdded?.Invoke(item, addedAmount);
+        OnInventoryChanged?.Invoke();
+
         return true;
     }
 
-    // ===============================
-    // REMOVE ITEM
-    // ===============================
+
     public void RemoveItem(ItemData item, int amount = 1)
     {
         for (int i = inventory.Count - 1; i >= 0; i--)
@@ -90,15 +91,15 @@ public class InventoryManager : MonoBehaviour
                     inventory.RemoveAt(i);
 
                 if (amount <= 0)
-                    return;
+                {
+                    OnItemRemoved?.Invoke(item, removed);
+                    OnInventoryChanged?.Invoke();            
+                    return; // menej ako 0 by to ani nemalo byt ale i guess radsej check
+                }
             }
         }
-        OnInventoryChanged?.Invoke();
     }
 
-    // ===============================
-    // USE ITEM
-    // ===============================
     public void UseItem(ItemData item, GameObject player)
     {
         if (item == null)

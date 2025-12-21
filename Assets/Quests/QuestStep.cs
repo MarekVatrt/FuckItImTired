@@ -1,5 +1,6 @@
 public enum QuestStep
 {
+    None,
     Zobudenie,
     ChodNaPrednasku,
     SkonceneChytanieMonsterov,
@@ -18,8 +19,10 @@ public enum QuestStep
 
     // Merge
     ChodZaKubom,
+    ZacatePexeso,
     VyhratePexeso,
     PrehratePexeso,
 
+    Klucik,
     Completed
 }

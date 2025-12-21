@@ -13,4 +13,6 @@ public class Dialogue
 
     [Header("Choices (Optional)")]
     public DialogueChoice[] choices;
+
+    public int showAfterIndexSentece;
 }

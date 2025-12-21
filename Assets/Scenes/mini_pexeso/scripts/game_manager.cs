@@ -4,6 +4,9 @@ using System.Collections;
 
 public class game_manager : MonoBehaviour
 {
+
+    [SerializeField] private MinigameController minigameController;
+
     //pexeso variables
     public bool first_card_flipped;
     public bool second_card_flipped;
@@ -28,10 +31,11 @@ public class game_manager : MonoBehaviour
             {
                 if (slot.item.itemName == "pifko")
                 {
-                    //todo dorobit nejak interaction s jakubom
-                    game_timer=300;
+                    // todo dorobit nejak interaction s jakubom
+                    // jedno pivo prida extra 2 minuty
+                    int addTime = slot.quantity * 120;
+                    game_timer+=addTime;
                     has_beer=true;
-                    break;
                 }
             }
             if (!has_beer)
@@ -114,6 +118,11 @@ public class game_manager : MonoBehaviour
         if (game_timer <= 0)
         {
             lose();
+
+        }
+        if(score == 12)
+        {
+            win();
         }
     }
 
@@ -125,11 +134,13 @@ public class game_manager : MonoBehaviour
 
     void lose()
     {
+        minigameController.Lose();
         Debug.Log("boohoo try again next time");
     }
 
     void win()
     {
+        minigameController.Win();
         Debug.Log("we won hell ye");
     }
 }

@@ -9,15 +9,6 @@ public class MinigameEntryTrigger : MonoBehaviour
     [Header("Quest")]
     [SerializeField] private QuestStep requiredQuestStep;
 
-    private bool playerInside;
-
-    void Update()
-    {
-        // if (playerInside && Input.GetKeyDown(KeyCode.E))
-        // {
-        //     TryEnterMinigame();
-        // }
-    }
 
     private void TryEnterMinigame()
     {

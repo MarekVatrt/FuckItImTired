@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 
-public class DialogueGiver : MonoBehaviour
+public class DialogueGiver : MonoBehaviour, IQuestTarget
 {
+    // target transformer pre dany queststep
+    public Transform TargetTransform => transform;
     // quest step v ktorom sa zapne konkretny dialog
     [SerializeField] private QuestStep questStepNeeded;
     public Dialogue dialogue;
@@ -11,8 +13,12 @@ public class DialogueGiver : MonoBehaviour
 
     public bool isTriggeredByPlayer = false;
 
+    [SerializeField] private bool isSceneChanger;
+
     public void Interact()
     {
+        if (isSceneChanger)
+            return;
         if (QuestManager.Instance.IsAtStep(questStepNeeded))
         {
             Debug.Log("SOM V SPRAVNOM STEPE, UKAZUJEM DIALOG");
@@ -37,6 +43,7 @@ public class DialogueGiver : MonoBehaviour
         // Start quest
         // QuestManager.Instance.StartQuest();
         Debug.Log("SKONCIL DIALOGUE");
+        // Destroy(this);
         // IBA AK HRAC INTERAGOVAL S DIALOGOM (stlacil E) CHOD NA DALSI QUEST STEP
         // if (isTriggeredByPlayer)
         // {

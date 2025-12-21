@@ -590,9 +590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047a5058b7cd53a4cab1e0f21db6f11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RewardGiver
-  rewards:
-  - item: {fileID: 0}
-    weaponIndex: 1
+  reward:
+    items: []
+    weaponIndex: 0
 --- !u!1 &350542074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,9 +1858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9d46d563cbb2e44965b46645c084d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
-  winStep: 0
-  loseStep: 0
-  branchOnWin: 0
+  winStep: 3
+  loseStep: 3
   rewardGiver: {fileID: 328911167}
   returnSceneName: ground_floor
 --- !u!1 &1078290645
@@ -2999,11 +2998,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1650188788957135050, guid: c38bc12759d6d2440b59e7cd90931e92,
-        type: 3}
-      propertyPath: m_text
-      value: "<u>energy drink</u>\n<color=green>+7</color> sk\xF3re"
-      objectReference: {fileID: 0}
     - target: {fileID: 3358004044629523576, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3104,21 +3098,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3500742228520385315, guid: c38bc12759d6d2440b59e7cd90931e92,
-        type: 3}
-      propertyPath: m_text
-      value: "<u>ko\u0161\xEDk</u>\nOvl\xE1danie:\n< / > alebo A / D"
-      objectReference: {fileID: 0}
     - target: {fileID: 6970574336217103829, guid: c38bc12759d6d2440b59e7cd90931e92,
         type: 3}
       propertyPath: m_Name
       value: Minigame_introduction
-      objectReference: {fileID: 0}
-    - target: {fileID: 8361579681546171352, guid: c38bc12759d6d2440b59e7cd90931e92,
-        type: 3}
-      propertyPath: m_text
-      value: "<u>test, vank\xFA\u0161 a kalkula\u010Dka</u>\n<color=red>-10</color>
-        sk\xF3re"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -3,6 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueChoice
 {
+    
     [Header("What player sees")]
     public string choiceText;
 

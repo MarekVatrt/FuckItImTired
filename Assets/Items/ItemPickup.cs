@@ -32,7 +32,7 @@ public class ItemPickup : MonoBehaviour
         if (added)
         {
             Debug.Log($"Picked up {item.itemName}");
-            PickupNotificationManager.Instance.Show(item, amount);
+            
 
             Destroy(gameObject);
         }

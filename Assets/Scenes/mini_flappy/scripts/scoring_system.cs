@@ -4,6 +4,7 @@ using TMPro;
 public class scoring_system : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text_field;
+    [SerializeField] private MinigameController minigameController;
     public int score;
     void Start()
     {
@@ -20,9 +21,12 @@ public class scoring_system : MonoBehaviour
         {
             score+=1;
             Debug.Log("+point");
+            if (score >= 5)
+                minigameController.Win();
         }
         else if (triggered_border.CompareTag("deletion_border"))
         {
+            minigameController.Lose();
             Debug.Log("game over broski");
         }
 
@@ -31,6 +35,7 @@ public class scoring_system : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("basket"))
         {
+            minigameController.Lose();
             Debug.Log("pole game over broskir");
         }
     }

@@ -494,7 +494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "energy drink\n<color=green>+7</color> sk\xF3re"
+  m_text: "<u>energy drink</u>\n<color=green>+7</color> sk\xF3re"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ba62de1edc167943a27e3bc51828adc, type: 2}
   m_sharedMaterial: {fileID: -6098706170142012841, guid: 9ba62de1edc167943a27e3bc51828adc,
@@ -1029,7 +1029,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "test, vank\xFA\u0161 a kalkula\u010Dka\n<color=red>-10</color> sk\xF3re"
+  m_text: "<u>test, vank\xFA\u0161 a kalkula\u010Dka</u>\n<color=red>-10</color>
+    sk\xF3re"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ba62de1edc167943a27e3bc51828adc, type: 2}
   m_sharedMaterial: {fileID: -6098706170142012841, guid: 9ba62de1edc167943a27e3bc51828adc,
@@ -1317,7 +1318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ko\u0161\xEDk\nOvl\xE1danie\n< / > alebo A / D"
+  m_text: "<u>ko\u0161\xEDk</u>\nOvl\xE1danie:\n< / > alebo A / D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ba62de1edc167943a27e3bc51828adc, type: 2}
   m_sharedMaterial: {fileID: -6098706170142012841, guid: 9ba62de1edc167943a27e3bc51828adc,

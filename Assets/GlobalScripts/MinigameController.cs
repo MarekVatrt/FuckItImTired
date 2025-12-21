@@ -12,12 +12,15 @@ public class MinigameController : MonoBehaviour
     [SerializeField] private RewardGiver rewardGiver;
 
     [Header("Scene")]
-    [SerializeField] private string returnSceneName;
+    [SerializeField] private string returnSceneNameOnWin;
+    [SerializeField] private string returnSceneNameOnLose;
+    
 
     public void Win()
     {
         Debug.Log("[MINIGAME] Player won!");
-        rewardGiver.GiveRewards();
+        if(rewardGiver != null)
+            rewardGiver.GiveRewards();
         // MinigameReturnData.WasWin = true;
 
         // // Store current scene info if needed (optional)
@@ -25,10 +28,11 @@ public class MinigameController : MonoBehaviour
         // MinigameReturnData.ReturnPosition = GetReturnPosition(); // spawn at door/player exit
 
         // Update quest
-        QuestManager.Instance.AdvanceToNextStep();
+        QuestManager.Instance.AdvanceTo(winStep);
+        QuestManager.Instance.MarkMinigameEnded();
 
         // Load previous scene
-        SceneManager.LoadScene(returnSceneName);
+        SceneManager.LoadScene(returnSceneNameOnWin);
         QuestManager.Instance.SetPlayerActive(true);
     }
 
@@ -41,9 +45,10 @@ public class MinigameController : MonoBehaviour
         // MinigameReturnData.ReturnPosition = GetReturnPosition();
 
         // Update quest if needed (different path)
-        QuestManager.Instance.AdvanceToNextStep();
+        QuestManager.Instance.AdvanceTo(loseStep);
+        QuestManager.Instance.MarkMinigameEnded();
 
-        SceneManager.LoadScene(returnSceneName);
+        SceneManager.LoadScene(returnSceneNameOnLose);
         QuestManager.Instance.SetPlayerActive(true);
     }
 }

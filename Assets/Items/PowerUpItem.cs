@@ -28,7 +28,7 @@ public class PowerUpItem : ItemData
         if (player == null)
             return;
 
-        PlayerStats stats = player.GetComponent<PlayerStats>();
+        PlayerStats stats = PlayerStats.Instance;
 
         if (stats == null)
         {

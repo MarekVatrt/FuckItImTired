@@ -81,8 +81,15 @@ public class getters_for_hud : MonoBehaviour
 
     void Update()
     {
-        
-        HUD.enabled=DialogueManager.Instance != null && !DialogueManager.Instance.DialogueActive();
+        if(DialogueManager.Instance == null)
+        {
+            // nemozeme na zaklade DialogueManagera spravovat viditelnost HUD, takze ho nechame zapnuty
+            HUD.enabled=enable_hud;
+        }
+        else
+        {
+            HUD.enabled=!DialogueManager.Instance.DialogueActive();
+        }
 
         if (healthbar != null && stats != null)
         {

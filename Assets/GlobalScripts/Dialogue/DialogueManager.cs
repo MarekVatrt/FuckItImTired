@@ -3,6 +3,10 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
+
+// bacha ne nejaky divny BUG ked je hrac v dialogu a pohne sa do scene changera
+// tak sa quest step prograsne aj bez toho aby hrac interagoval
+// s dialog oknom/npc (stlaci E)
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
@@ -69,7 +73,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in sentence)
         {
             dialogueText.text += c;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.005f);
         }
 
         isTyping = false;
@@ -83,7 +87,12 @@ public class DialogueManager : MonoBehaviour
 
         continueText.gameObject.SetActive(false);
         sentenceIndex++;
-
+        if (currentDialogue.choices != null &&
+            currentDialogue.showAfterIndexSentece < sentenceIndex &&
+            currentDialogue.showAfterIndexSentece != 0)
+        {
+            ShowChoices();
+        }
         if (sentenceIndex < currentDialogue.sentences.Length)
         {
             StopAllCoroutines();
@@ -97,7 +106,7 @@ public class DialogueManager : MonoBehaviour
 
     private void HandleDialogueEnd()
     {
-        if (currentDialogue.choices != null && currentDialogue.choices.Length > 0)
+        if (currentDialogue.choices != null && currentDialogue.choices.Length > 0 && currentDialogue.showAfterIndexSentece == 0)
         {
             ShowChoices();
         }
@@ -108,8 +117,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void ShowChoices()
-    {   
-        DialogueChoice [] writtenChoices = currentDialogue.choices;
+    {
+        DialogueChoice[] writtenChoices = currentDialogue.choices;
         if (writtenChoices.Length == 1 && writtenChoices[0].branchToSet == QuestBranch.None)
         {
             // if there is only one choice just advance to is and skip making buttons
@@ -163,6 +172,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool DialogueActive()
     {
-        return dialoguePanel.activeSelf || choicePanel.activeSelf;
+        if (dialoguePanel != null && choicePanel != null)
+            return dialoguePanel.activeSelf || choicePanel.activeSelf;
+        return false;
     }
 }
