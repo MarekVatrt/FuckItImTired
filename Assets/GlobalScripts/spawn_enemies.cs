@@ -16,7 +16,7 @@ public class spawn_enemies : MonoBehaviour
     public LayerMask blocked_layers;
 
     //pred "zaciatkom" hry sa nebudu spawnovat
-    public bool spawning_enabled;
+    private bool spawning_enabled;
 
     //lokacie spawnerov
     private Transform[] spawn_points;
@@ -33,6 +33,7 @@ public class spawn_enemies : MonoBehaviour
 
     void Start()
     {
+        spawning_enabled = QuestManager.Instance.CurrentStep > QuestStep.OdidZoSkoly;
         //ak je zapnuty spawning, spawneme
         if (spawning_enabled)
             spawn();

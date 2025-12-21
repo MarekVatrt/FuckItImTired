@@ -60,6 +60,14 @@ public class PlayerStats : MonoBehaviour
         // CurrentHealth = maxHealth;
 
     }
+
+    // respawn
+    public void RestoreHealth()
+    {
+        CurrentHealth = baseMaxHealth;
+    }
+
+
     // ===== DEBUFFS =====
     public void DrunkDebuff(float duration)
     {
@@ -200,7 +208,11 @@ public class PlayerStats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player died");
-        // later: animation, respawn, game over
+        if(GameManager.Instance == null)
+        {
+            Debug.Log("gamenamager musi existovat aby hra spravne fungovala");
+            return;
+        }
+        GameManager.Instance.PlayerDied();
     }
 }

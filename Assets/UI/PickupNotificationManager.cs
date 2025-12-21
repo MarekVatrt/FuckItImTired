@@ -7,9 +7,20 @@ public class PickupNotificationManager : MonoBehaviour
     public Transform notificationParent;
     public GameObject notificationPrefab;
 
-    void Awake()
+    private void Awake()
     {
         Instance = this;
+    }
+
+    private void OnEnable()
+    {
+        InventoryManager.Instance.OnItemAdded += Show;
+    }
+
+    private void OnDisable()
+    {
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.OnItemAdded -= Show;
     }
 
     public void Show(ItemData item, int amount)

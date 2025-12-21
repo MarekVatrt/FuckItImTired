@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ground_floor/ground_floor.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/library/library.unity
+    guid: 14793abd46b1bb143be11736953e73ba
+  - enabled: 1
     path: Assets/Scenes/elevator_lobby/elevator_lobby.unity
     guid: d6e682fe956955d4f862fe4154d9e40d
   - enabled: 1
@@ -27,15 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/coworking/coworking.unity
     guid: 043e777c8a7bbd4499bafc493a1da1a8
   - enabled: 1
-    path: Assets/Scenes/library/library.unity
-    guid: 14793abd46b1bb143be11736953e73ba
-  - enabled: 1
     path: Assets/Scenes/mini_pexeso/mini_pexeso.unity
     guid: 0a66ba3ec03ec634b80ed6dd002b3641
   - enabled: 1
     path: Assets/Scenes/elevator_selector/elevator_selector.unity
     guid: 3cda9150e35e0b84ca21681b28e12170
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/testing_area/testing_area.unity
     guid: 181ba44b42ec8cf418b59325d0219959
   - enabled: 1

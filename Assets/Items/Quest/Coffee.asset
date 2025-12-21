@@ -15,8 +15,10 @@ MonoBehaviour:
   itemName: Coffee
   description: Kavicka ktoru ziskas za quest na 6. mal by si ju dat kto si ju vypytal,
     ale ak ju nechtiac vypijes tak ta prijemne boostne, no budes musiet ist po dalsiu
-  icon: {fileID: 0}
+  icon: {fileID: 4687309882487268517, guid: 8a3f4620025fa3343a3149063f6d144a, type: 3}
   stackable: 1
-  maxStack: 99
-  isConsumed: 1
+  maxStack: 5
+  isConsumed: 0
   itemType: 2
+  isBeer: 0
+  boostDuration: 0

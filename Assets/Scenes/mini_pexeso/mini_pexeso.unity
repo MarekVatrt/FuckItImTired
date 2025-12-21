@@ -2080,6 +2080,55 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 866399649}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &867649871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867649873}
+  - component: {fileID: 867649872}
+  m_Layer: 0
+  m_Name: MinigameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &867649872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867649871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9d46d563cbb2e44965b46645c084d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameController
+  winStep: 13
+  loseStep: 14
+  rewardGiver: {fileID: 0}
+  returnSceneNameOnWin: ground_floor
+  returnSceneNameOnLose: ground_floor
+--- !u!4 &867649873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867649871}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.62431, y: 2.18921, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &976283226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3559,7 +3608,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1834770622}
   - component: {fileID: 1834770621}
-  - component: {fileID: 1834770620}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3567,14 +3615,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1834770620
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834770619}
-  m_Enabled: 1
 --- !u!20 &1834770621
 Camera:
   m_ObjectHideFlags: 0
@@ -4390,6 +4430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24b3f3bedc25294a93e4e18d98a2f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::game_manager
+  minigameController: {fileID: 0}
   first_card_flipped: 0
   second_card_flipped: 0
   first_card: {fileID: 0}
@@ -4532,3 +4573,4 @@ SceneRoots:
   - {fileID: 211372226}
   - {fileID: 1889546111}
   - {fileID: 533949940}
+  - {fileID: 867649873}
