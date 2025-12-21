@@ -5,6 +5,7 @@ public class nausea_controller : MonoBehaviour
 {
     public Slider slider;
     [SerializeField] private float fill_value;
+    [SerializeField] private MinigameController minigameController;
     private float timer;
     public bool fill_or_empty;
     void Start()
@@ -49,5 +50,6 @@ public class nausea_controller : MonoBehaviour
     void die_of_smell()
     {
         Debug.Log("smrad itickarov bol na teba priliz moc");
+        minigameController.Lose();
     }
 }

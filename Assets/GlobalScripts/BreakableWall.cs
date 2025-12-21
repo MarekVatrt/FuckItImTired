@@ -21,6 +21,11 @@ public class BreakableWall : MonoBehaviour
 
     void Start()
     {
+        if(QuestManager.Instance != null && QuestManager.Instance.CurrentStep < QuestStep.Klucik)
+        {
+            Destroy(gameObject);
+            return;
+        }
         if(QuestManager.Instance != null && QuestManager.Instance.IsAtStep(QuestStep.Completed))
         {
             otherSprite.gameObject.SetActive(true);

@@ -235,6 +235,60 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.7995796, y: 2.1590538}
   m_EdgeRadius: 0
+--- !u!1 &44997284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44997285}
+  - component: {fileID: 44997286}
+  m_Layer: 0
+  m_Name: quest1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44997285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44997284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 530178370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44997286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44997284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
+  questStepNeeded: 16
+  dialogue:
+    speakerName: 
+    NPCSprite: {fileID: 0}
+    sentences: []
+    choices: []
+    showAfterIndexSentece: 0
+  lockPlayer: 0
+  isTriggeredByPlayer: 0
+  isSceneChanger: 1
 --- !u!1 &55943096
 GameObject:
   m_ObjectHideFlags: 0
@@ -9878,7 +9932,8 @@ Transform:
   m_LocalPosition: {x: -38.6793, y: 17.2241, z: 0}
   m_LocalScale: {x: 1.4, y: 8.270519, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 44997285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &805562329
@@ -9960,20 +10015,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestTargetProvider
   targets:
+  - step: 2
+    target: {fileID: 1103889816}
+  - step: 3
+    target: {fileID: 1103889816}
   - step: 4
     target: {fileID: 530178367}
   - step: 5
+    target: {fileID: 1377518655}
+  - step: 6
+    target: {fileID: 1434846162}
+  - step: 7
     target: {fileID: 1377518655}
   - step: 8
     target: {fileID: 1690367790}
   - step: 9
     target: {fileID: 1434846162}
-  - step: 6
+  - step: 10
     target: {fileID: 1434846162}
-  - step: 7
-    target: {fileID: 1377518655}
+  - step: 11
+    target: {fileID: 1103889816}
+  - step: 12
+    target: {fileID: 1103889816}
+  - step: 13
+    target: {fileID: 1103889816}
+  - step: 14
+    target: {fileID: 1103889816}
   - step: 15
     target: {fileID: 527318366}
+  - step: 16
+    target: {fileID: 530178367}
 --- !u!4 &822190279
 Transform:
   m_ObjectHideFlags: 0
@@ -10784,6 +10855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103889814}
   - component: {fileID: 1103889815}
+  - component: {fileID: 1103889816}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: to_ground_up
@@ -10852,6 +10924,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1103889816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103889813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
+  questStepNeeded: 0
+  dialogue:
+    speakerName: 
+    NPCSprite: {fileID: 0}
+    sentences: []
+    choices: []
+    showAfterIndexSentece: 0
+  lockPlayer: 0
+  isTriggeredByPlayer: 0
+  isSceneChanger: 1
 --- !u!4 &1171774420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6301802032790489831, guid: 6f7fb8d2798ee1c4782ac2ee6319397e,

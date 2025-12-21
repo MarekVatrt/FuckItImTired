@@ -217,11 +217,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestTargetProvider
   targets:
-  - step: 3
-    target: {fileID: 1698134090}
   - step: 2
     target: {fileID: 1698134090}
+  - step: 3
+    target: {fileID: 1698134090}
   - step: 4
+    target: {fileID: 937229706}
+  - step: 5
+    target: {fileID: 937229706}
+  - step: 6
+    target: {fileID: 937229706}
+  - step: 7
+    target: {fileID: 937229706}
+  - step: 8
+    target: {fileID: 937229706}
+  - step: 9
+    target: {fileID: 937229706}
+  - step: 11
+    target: {fileID: 1651890072}
+  - step: 12
+    target: {fileID: 1651890072}
+  - step: 13
+    target: {fileID: 1651890072}
+  - step: 14
+    target: {fileID: 308229699}
+  - step: 15
+    target: {fileID: 937229706}
+  - step: 16
     target: {fileID: 937229706}
 --- !u!4 &186257129
 Transform:
@@ -1698,6 +1720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308229697}
   - component: {fileID: 308229698}
+  - component: {fileID: 308229699}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: to_fiitfood
@@ -1766,6 +1789,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &308229699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308229696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
+  questStepNeeded: 0
+  dialogue:
+    speakerName: 
+    NPCSprite: {fileID: 0}
+    sentences: []
+    choices: []
+    showAfterIndexSentece: 0
+  lockPlayer: 0
+  isTriggeredByPlayer: 0
+  isSceneChanger: 1
 --- !u!1 &368236251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,52 +2380,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &872029385
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 872029386}
-  - component: {fileID: 872029387}
-  m_Layer: 24
-  m_Name: IndicatorController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &872029386
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872029385}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1509474144}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &872029387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872029385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22d6ab45ca80b04aae35b38b633cd48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestIndicatorController
-  indicator: {fileID: 1882033308}
-  playerPos: {fileID: 1509474144}
 --- !u!1 &937229703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,6 +2513,119 @@ Transform:
   - {fileID: 619394802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1124417712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124417713}
+  - component: {fileID: 1124417715}
+  - component: {fileID: 1124417714}
+  m_Layer: 0
+  m_Name: pexesolose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124417713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124417712}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1651890074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1124417714
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124417712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.2713518, y: -0.4378507}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.5427036, y: 5.5974355}
+  m_EdgeRadius: 0
+--- !u!114 &1124417715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124417712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
+  questStepNeeded: 14
+  dialogue:
+    speakerName: Palo
+    NPCSprite: {fileID: -3067294759816104061, guid: 227bcc5883af9a041a1356ee173026ac,
+      type: 3}
+    sentences:
+    - "Tridsa\u0165 sek\xFAnd. Jasn\xE9. Ani keby som bol robot s dokonalou pam\xE4\u0165ou.\r\n"
+    - "Potrebujem in\xFD pr\xEDstup.  Nie r\xFDchle prsty. Nie geni\xE1lnu pam\xE4\u0165,
+      ale presved\u010Di\u0165 ho.\r\n"
+    - "Potrebujem in\xFD pr\xEDstup.  Nie r\xFDchle prsty. Nie geni\xE1lnu pam\xE4\u0165,
+      ale presved\u010Di\u0165 ho.\r\n"
+    - "*Poh\u013Ead mi ujde ku FIIT Foodu. Automat. A v \u0148om\u2026 pivo.*\nvchod
+      je hne\u010F pri tulivaku. Tom tulivaku, na ktorom som dnes r\xE1no spal ako
+      troska.\r\n"
+    - "Buko vyzer\xE1 ako typ, \u010Do sa nech\xE1 obm\xE4k\u010Di\u0165. A \u010Das?
+      Ten sa v\u017Edy d\xE1 natiahnu\u0165.\n\u010C\xEDm viac p\xEDv mu donesiem
+      naraz, t\xFDm viac sek\xFAnd zo seba ur\u010Dite pust\xED."
+    choices: []
+    showAfterIndexSentece: 0
+  lockPlayer: 0
+  isTriggeredByPlayer: 0
+  isSceneChanger: 0
 --- !u!1 &1124664536
 GameObject:
   m_ObjectHideFlags: 0
@@ -13763,12 +13875,124 @@ Transform:
   - {fileID: 2058161456}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1509474144 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2105457900}
-  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1465149917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4013589311824192555, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_Name
+      value: Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225210467282658294, guid: fa71686f4e72ec44884efee4f5773fe3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa71686f4e72ec44884efee4f5773fe3, type: 3}
 --- !u!1 &1530511925
 GameObject:
   m_ObjectHideFlags: 0
@@ -17004,8 +17228,6 @@ GameObject:
   - component: {fileID: 1651890073}
   - component: {fileID: 1651890072}
   - component: {fileID: 1651890075}
-  - component: {fileID: 1651890076}
-  - component: {fileID: 1651890077}
   m_Layer: 0
   m_Name: KuboPexeso
   m_TagString: Untagged
@@ -17082,7 +17304,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.5462189, y: -0.43611383}
+  m_Offset: {x: 2.0935326, y: -0.43611383}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -17092,7 +17314,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.7267838, y: 5.440428}
+  m_Size: {x: 5.821411, y: 5.440428}
   m_EdgeRadius: 0
 --- !u!4 &1651890074
 Transform:
@@ -17108,6 +17330,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1124664537}
+  - {fileID: 1124417713}
+  - {fileID: 1884945427}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1651890075
@@ -17124,79 +17348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameEntryTrigger
   minigameSceneName: mini_pexeso
   requiredQuestStep: 12
---- !u!114 &1651890076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651890071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
-  questStepNeeded: 13
-  dialogue:
-    speakerName: Buko
-    NPCSprite: {fileID: -9071210201169073270, guid: 8477b70b3bdc1d848868467fe5972753,
-      type: 3}
-    sentences:
-    - "Dobre, Palo. Dal si to. Tak\u017Ee po\u010D\xFAvaj pozorne\r\n"
-    - "K\u013E\xFA\u010De s\xFA na \u0161tudijnom oddelen\xED. Tie spr\xE1vne. Od
-      v\xFDchodov.\r\n"
-    - "Probl\xE9m je, \u017Ee sa tam ned\xE1 len tak vojs\u0165. Tie \u017Eeny tam
-      stoja odkedy zamkli dvere. S\xFA podr\xE1\u017Eden\xE9, nasrat\xE9\u2026 a
-      cez ne sa nedostane nikto.\r\n"
-    - "Ale steny? Tie s\xFA in\xFD pr\xEDbeh. Je tam stena. Papierov\xE1. Fakt. Tak\xE1,
-      \u017Ee by sa hanbila aj kart\xF3nov\xE1 krabica.\r\n"
-    - "Nemus\xED\u0161 ma\u0165 ni\u010D \u0161peci\xE1lne. Sta\u010D\xED ceruzka.
-      Alebo hoci\u010Do pevnej\u0161ie. Dva, tri poriadne buchance\u2026 a si cez.\r\n"
-    - "Ke\u010F sa dostane\u0161 za stenu, si rovno pri k\u013E\xFA\u010Doch. Vezme\u0161
-      ich a m\xF4\u017Ee\u0161 \xEDs\u0165."
-    choices:
-    - choiceText: 
-      branchToSet: 0
-      stepToAdvanceTo: 15
-      endsDialogue: 1
-    showAfterIndexSentece: 0
-  lockPlayer: 0
-  isTriggeredByPlayer: 0
-  isSceneChanger: 0
---- !u!114 &1651890077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651890071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
-  questStepNeeded: 14
-  dialogue:
-    speakerName: Palo
-    NPCSprite: {fileID: -3067294759816104061, guid: 227bcc5883af9a041a1356ee173026ac,
-      type: 3}
-    sentences:
-    - "Tridsa\u0165 sek\xFAnd. Jasn\xE9. Ani keby som bol robot s dokonalou pam\xE4\u0165ou.\r\n"
-    - "Potrebujem in\xFD pr\xEDstup.  Nie r\xFDchle prsty. Nie geni\xE1lnu pam\xE4\u0165,
-      ale presved\u010Di\u0165 ho.\r\n"
-    - "Potrebujem in\xFD pr\xEDstup.  Nie r\xFDchle prsty. Nie geni\xE1lnu pam\xE4\u0165,
-      ale presved\u010Di\u0165 ho.\r\n"
-    - "*Poh\u013Ead mi ujde ku FIIT Foodu. Automat. A v \u0148om\u2026 pivo.*\nvchod
-      je hne\u010F pri tulivaku. Tom tulivaku, na ktorom som dnes r\xE1no spal ako
-      troska.\r\n"
-    - "Buko vyzer\xE1 ako typ, \u010Do sa nech\xE1 obm\xE4k\u010Di\u0165. A \u010Das?
-      Ten sa v\u017Edy d\xE1 natiahnu\u0165.\n\u010C\xEDm viac p\xEDv mu donesiem
-      naraz, t\xFDm viac sek\xFAnd zo seba ur\u010Dite pust\xED."
-    choices: []
-    showAfterIndexSentece: 0
-  lockPlayer: 0
-  isTriggeredByPlayer: 0
-  isSceneChanger: 0
 --- !u!1 &1698134085
 GameObject:
   m_ObjectHideFlags: 0
@@ -17370,7 +17521,7 @@ Transform:
   m_GameObject: {fileID: 1773476050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.13, y: -0.33, z: 0}
+  m_LocalPosition: {x: -15.3, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17464,18 +17615,124 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf30412262ec9744c971acdc8d8bd780, type: 3}
---- !u!114 &1882033308 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3533016841524687439, guid: f538208b43343db4ab860d5d717b3a4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2105457900}
+--- !u!1 &1884945426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884945427}
+  - component: {fileID: 1884945429}
+  - component: {fileID: 1884945428}
+  m_Layer: 0
+  m_Name: pexesowin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884945427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884945426}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1651890074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1884945428
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884945426}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.2713518, y: -0.46521664}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.5427036, y: 5.1048527}
+  m_EdgeRadius: 0
+--- !u!114 &1884945429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884945426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796545e7a872a6b43b38ea6c4279138b, type: 3}
+  m_Script: {fileID: 11500000, guid: 132444d2c6cfc0940b035ea26a636fca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestIndicator
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGiver
+  questStepNeeded: 13
+  dialogue:
+    speakerName: Buko
+    NPCSprite: {fileID: -9071210201169073270, guid: 8477b70b3bdc1d848868467fe5972753,
+      type: 3}
+    sentences:
+    - "Dobre, Palo. Dal si to. Tak\u017Ee po\u010D\xFAvaj pozorne\r\n"
+    - "K\u013E\xFA\u010De s\xFA na \u0161tudijnom oddelen\xED. Tie spr\xE1vne. Od
+      v\xFDchodov.\r\n"
+    - "Probl\xE9m je, \u017Ee sa tam ned\xE1 len tak vojs\u0165. Tie \u017Eeny tam
+      stoja odkedy zamkli dvere. S\xFA podr\xE1\u017Eden\xE9, nasrat\xE9\u2026 a
+      cez ne sa nedostane nikto.\r\n"
+    - "Ale steny? Tie s\xFA in\xFD pr\xEDbeh. Je tam stena. Papierov\xE1. Fakt. Tak\xE1,
+      \u017Ee by sa hanbila aj kart\xF3nov\xE1 krabica.\r\n"
+    - "Nemus\xED\u0161 ma\u0165 ni\u010D \u0161peci\xE1lne. Sta\u010D\xED ceruzka.
+      Alebo hoci\u010Do pevnej\u0161ie. Dva, tri poriadne buchance\u2026 a si cez.\r\n"
+    - "Ke\u010F sa dostane\u0161 za stenu, si rovno pri k\u013E\xFA\u010Doch. Vezme\u0161
+      ich a m\xF4\u017Ee\u0161 \xEDs\u0165."
+    choices:
+    - choiceText: 
+      branchToSet: 0
+      stepToAdvanceTo: 15
+      endsDialogue: 1
+    showAfterIndexSentece: 0
+  lockPlayer: 0
+  isTriggeredByPlayer: 0
+  isSceneChanger: 0
 --- !u!1 &1926091347
 GameObject:
   m_ObjectHideFlags: 0
@@ -21887,114 +22144,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1438487934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2105457900
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 651743550951493009, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 651743550951493009, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 651743550951493009, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3714977449386436306, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3714977449386436306, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5234246657329489883, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5234246657329489883, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6395253937941174405, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6410044517507068688, guid: f538208b43343db4ab860d5d717b3a4e, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7619301928859856484, guid: f538208b43343db4ab860d5d717b3a4e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 872029386}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f538208b43343db4ab860d5d717b3a4e, type: 3}
 --- !u!1 &2136158745
 GameObject:
   m_ObjectHideFlags: 0
@@ -22066,4 +22215,4 @@ SceneRoots:
   - {fileID: 1651890074}
   - {fileID: 1354518269}
   - {fileID: 134156106}
-  - {fileID: 2105457900}
+  - {fileID: 1465149917}

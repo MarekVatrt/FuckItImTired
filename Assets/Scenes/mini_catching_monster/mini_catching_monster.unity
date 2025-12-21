@@ -592,7 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RewardGiver
   reward:
     items: []
-    weaponIndex: 0
+    weaponIndex: 1
 --- !u!1 &350542074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,8 @@ MonoBehaviour:
   winStep: 3
   loseStep: 3
   rewardGiver: {fileID: 328911167}
-  returnSceneName: ground_floor
+  returnSceneNameOnWin: ground_floor
+  returnSceneNameOnLose: mini_catching_monster
 --- !u!1 &1078290645
 GameObject:
   m_ObjectHideFlags: 0
