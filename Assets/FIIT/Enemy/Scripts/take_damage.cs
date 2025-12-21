@@ -49,7 +49,7 @@ public class take_damage : MonoBehaviour
 
             // knockback_taken=weapons_script.curr_weapon.knockback;
             knockback_taken = weapons_script.GetCurrentKnockback();
-
+            Debug.Log("POMOOOOC");
             take_attack();
         }
     }

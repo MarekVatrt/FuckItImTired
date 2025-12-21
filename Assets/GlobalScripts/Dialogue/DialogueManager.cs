@@ -80,6 +80,7 @@ public class DialogueManager : MonoBehaviour
         continueText.gameObject.SetActive(true);
     }
 
+    private bool choicesShown = false;
     public void ContinueDialogue()
     {
         if (isTyping)
@@ -89,8 +90,10 @@ public class DialogueManager : MonoBehaviour
         sentenceIndex++;
         if (currentDialogue.choices != null &&
             currentDialogue.showAfterIndexSentece < sentenceIndex &&
-            currentDialogue.showAfterIndexSentece != 0)
+            currentDialogue.showAfterIndexSentece != 0 &&
+            !choicesShown)
         {
+            choicesShown = true;
             ShowChoices();
         }
         if (sentenceIndex < currentDialogue.sentences.Length)
