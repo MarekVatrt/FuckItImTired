@@ -29,7 +29,7 @@ public class game_manager : MonoBehaviour
         {
             foreach(InventorySlot slot in InventoryManager.Instance.inventory)
             {
-                if (slot.item.itemName == "pifko")
+                if (slot.item.itemName == "Pifko")
                 {
                     // todo dorobit nejak interaction s jakubom
                     // jedno pivo prida extra 2 minuty

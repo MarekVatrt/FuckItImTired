@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd08b89919a31e9498951090ac3b60c1, type: 3}
   m_Name: pifko
   m_EditorClassIdentifier: Assembly-CSharp::QuestItem
-  itemName: pifko
+  itemName: Pifko
   description: 'Nechutne poslek Tesco Piwo, sa da ziskat z automatu pri fiitfoode.
     Mozes ho niekomu ponuknut, alebo si sam vypit. Bacha ale .. mozno ma zle ucinky '
   icon: {fileID: 301023759137380362, guid: 2bd573420770fb74ea2746db258b9730, type: 3}
