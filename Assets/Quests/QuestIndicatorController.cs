@@ -46,6 +46,11 @@ public class QuestIndicatorController : MonoBehaviour
     private void Update()
     {
         // Only show indicator if not in dialogue or minigame
+        if(DialogueManager.Instance == null || QuestManager.Instance == null)
+        {
+            indicator.gameObject.SetActive(false);
+            return;
+        }
         if (!DialogueManager.Instance.DialogueActive() &&
             !QuestManager.Instance.MinigameActive())
         {

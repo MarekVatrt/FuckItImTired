@@ -22,7 +22,11 @@ public class DialogueGiver : MonoBehaviour, IQuestTarget
         if (QuestManager.Instance.IsAtStep(questStepNeeded))
         {
             Debug.Log("SOM V SPRAVNOM STEPE, UKAZUJEM DIALOG");
-
+            if(DialogueManager.Instance == null)
+            {
+                Debug.Log("Aby som mohol ukazat dialog potrebujem mat dialogue manager v scene");
+                return;
+            }
             DialogueManager.Instance.StartDialogue(dialogue);
             if (lockPlayer)
                 Player_controller.inputLocked = true;
